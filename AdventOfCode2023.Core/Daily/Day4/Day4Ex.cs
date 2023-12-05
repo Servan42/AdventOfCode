@@ -19,11 +19,7 @@ namespace AdventOfCode2023.Core.Daily.Day4
 
         public override void ComputePart2()
         {
-            var cards = new List<Card>();
-            foreach (var line in InputLines)
-            {
-                cards.Add(Card.Parse(line));
-            }
+            var cards = InputLines.Select(line => Card.Parse(line)).ToList();
 
             int nextCardIndex = 0;
             foreach(var card in cards)
