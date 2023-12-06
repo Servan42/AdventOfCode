@@ -16,5 +16,14 @@ namespace AdventOfCode2023.Core
                 .Select(s => double.Parse(s))
                 .ToList();
         }
+
+        public static List<int> GetSpacesSeparatedInts(this string str)
+        {
+            return str
+                .Split(' ')
+                .Where(s => !string.IsNullOrEmpty(s))
+                .Select(s => int.Parse(s))
+                .ToList();
+        }
     }
 }
