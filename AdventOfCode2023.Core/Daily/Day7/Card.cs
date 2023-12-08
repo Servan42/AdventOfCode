@@ -8,14 +8,14 @@ namespace AdventOfCode2023.Core.Daily.Day7
 {
     public class Card
     {
-        public static Card Parse(char character)
+        public static Card Parse(char character, bool handleJokers = false)
         {
             var card = new Card(character);
-            card.ResolveValue();
+            card.ResolveValue(handleJokers);
             return card;
         }
 
-        private void ResolveValue()
+        private void ResolveValue(bool handleJokers)
         {
             if (Character >= '2' && Character <= '9')
             {
@@ -29,7 +29,7 @@ namespace AdventOfCode2023.Core.Daily.Day7
                         Value = 10;
                         break;
                     case 'J':
-                        Value = 11;
+                        Value = handleJokers ? 1 : 11;
                         break;
                     case 'Q':
                         Value = 12;

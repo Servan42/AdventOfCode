@@ -8,35 +8,57 @@ namespace AdventOfCode2023.Core.Daily.Day7
 {
     public class CardHand
     {
-        private const int ONE_PAIR = 15;
-        private const int TWO_PAIRS = 16;
-        private const int THREE_OF_A_KIND = 17;
-        private const int FULL_HOUSE = 18;
-        private const int FOUR_OF_A_KIND = 19;
-        private const int FIVE_OF_A_KIND = 20;
+        private const int HIGH_CARD = 14; // -4 with frequency solution
+        private const int ONE_PAIR = 15; // -2
+        private const int TWO_PAIRS = 16; // -1
+        private const int THREE_OF_A_KIND = 17; // 0
+        private const int FULL_HOUSE = 18; // 1
+        private const int FOUR_OF_A_KIND = 19; // 2
+        private const int FIVE_OF_A_KIND = 20; // 4
 
         public int BidAmount { get; set; }
         public int TypeValue { get; set; }
         public string Hand { get; set; }
         public List<Card> Cards { get; set; } = new();
 
-        public static CardHand Parse(string handLine, bool useFrequencySolution = false)
+        public static CardHand Parse(string handLine, bool useFrequencySolution = false, bool handleJokers = false)
         {
-            CardHand cardHand = new CardHand();
+            var cardHand = new CardHand();
             var split = handLine.Split(' ');
             cardHand.Hand = split[0];
             cardHand.BidAmount = int.Parse(split[1]);
-            cardHand.ParseCards();
-            cardHand.TypeValue = cardHand.ResolveValue(useFrequencySolution);
+            cardHand.ParseCards(handleJokers);
+            if (handleJokers && cardHand.Hand.Contains('J'))
+            {
+                cardHand.TypeValue = cardHand.ResolveValueWithJokers(useFrequencySolution);
+            }
+            else
+            {
+                cardHand.TypeValue = cardHand.ResolveValue(useFrequencySolution);
+            }
             return cardHand;
         }
 
-        private void ParseCards()
+        private void ParseCards(bool handleJokers)
         {
             foreach (var c in Hand)
             {
-                Cards.Add(Card.Parse(c));
+                Cards.Add(Card.Parse(c, handleJokers));
             }
+        }
+
+        private int ResolveValueWithJokers(bool useFrequencySolution)
+        {
+            var typeValues = new List<int>();
+            foreach (var replacedCard in "AKQT98765432")
+            {
+                var OldHand = Hand;
+                Hand = Hand.Replace('J', replacedCard);
+                typeValues.Add(ResolveValue(useFrequencySolution));
+                Hand = OldHand;
+            }
+
+            return typeValues.Max();
         }
 
         private int ResolveValue(bool useFrequencySolution)
@@ -72,50 +94,8 @@ namespace AdventOfCode2023.Core.Daily.Day7
             if (Hand.Count(c => Hand.Count(x => x == c) == 2) == 2)
                 return ONE_PAIR;
 
-            //return Cards.Max(c => c.Value); FRO FUCK'S SAKE THIS WAS NOT SPECIFIED
-            return 14;
+            //return Cards.Max(c => c.Value); FOR FUCK'S SAKE THIS WAS NOT SPECIFIED
+            return HIGH_CARD;
         }
-
-        //public string GetTypeValueAsTextForDebug(bool useFrequencySolution)
-        //{
-        //    if (useFrequencySolution)
-        //    {
-        //        switch (TypeValue)
-        //        {
-        //            case 4:
-        //                return "five of a kind ";
-        //            case 2:
-        //                return "four of a kind ";
-        //            case 1:
-        //                return "full house     ";
-        //            case 0:
-        //                return "three of a kind";
-        //            case -1:
-        //                return "two pairs      ";
-        //            case -2:
-        //                return "one pair       ";
-        //            default:
-        //                return "highvalue    " + TypeValue;
-        //        }
-        //    }
-
-        //    switch (TypeValue)
-        //    {
-        //        case FIVE_OF_A_KIND:
-        //            return "five of a kind ";
-        //        case FOUR_OF_A_KIND:
-        //            return "four of a kind ";
-        //        case FULL_HOUSE:
-        //            return "full house     ";
-        //        case THREE_OF_A_KIND:
-        //            return "three of a kind";
-        //        case TWO_PAIRS:
-        //            return "two pairs      ";
-        //        case ONE_PAIR:
-        //            return "one pair       ";
-        //        default:
-        //            return "highvalue    " + TypeValue;
-        //    }
-        //}
     }
 }

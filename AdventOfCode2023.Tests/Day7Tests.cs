@@ -40,6 +40,16 @@ namespace AdventOfCode2023.Tests
             Assert.That(card.Character, Is.EqualTo(character));
         }
 
+        public void Should_parse_card_joker()
+        {
+            // WHEN
+            Card card = Card.Parse('J', true);
+
+            // THEN
+            Assert.That(card.Value, Is.EqualTo(1));
+            Assert.That(card.Character, Is.EqualTo('J'));
+        }
+
         [TestCase("23456 1", 14)]
         [TestCase("34567 1", 14)]
         [TestCase("45678 1", 14)]
