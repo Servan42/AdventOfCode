@@ -42,12 +42,10 @@ namespace AdventOfCode2023.Core.Daily.Day6
 
         public string ComputeNumbersOfWayToBeatTheRecordMultiplied()
         {
-            int mult = 1;
-            foreach(var race in Races) 
-            {
-                mult *= race.ComputeNumberOfWaysToBeatTheRecord();
-            }
-            return mult.ToString();
+            return Races
+                .Select(race => race.ComputeNumberOfWaysToBeatTheRecord())
+                .Mult()
+                .ToString();
         }
     }
 }
