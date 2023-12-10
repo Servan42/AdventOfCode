@@ -11,6 +11,7 @@ namespace AdventOfCode2023.Core.Daily.Day10.Nodes
     {
         private readonly int row;
         private readonly int column;
+        public bool IsPartOfMainLoop { get; set; }
 
         public PipeNode(string identifier, int row, int column) : base(identifier)
         {

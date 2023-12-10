@@ -80,5 +80,26 @@ namespace AdventOfCode2023.Core.Daily.Day10
 
             return nbSteps + 1;
         }
+
+        public int GetNbTilesThatAreInsideTheLoop()
+        {
+            FlagNodesThatArePartOfTheLoop();
+            throw new NotImplementedException("Find tiles enclosed by the loop");
+        }
+
+        private void FlagNodesThatArePartOfTheLoop()
+        {
+            ((PipeNode) startNode).IsPartOfMainLoop = true;
+            INode lastNode = startNode;
+            INode currentNode = this.GetNeighbors(startNode).First();
+
+            while(currentNode.GetUniqueIdentifier() != startNode.GetUniqueIdentifier()) 
+            {
+                ((PipeNode)currentNode).IsPartOfMainLoop = true;
+                INode newNode = this.GetNeighbors(currentNode).First(n => n.GetUniqueIdentifier() != lastNode.GetUniqueIdentifier());
+                lastNode = currentNode;
+                currentNode = newNode;
+            }
+        }
     }
 }

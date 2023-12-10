@@ -18,7 +18,10 @@ namespace AdventOfCode2023.Core.Daily.Day10
 
         public override void ComputePart2()
         {
-            throw new NotImplementedException();
+            Output = PipeMaze
+                .Parse(InputLines)
+                .GetNbTilesThatAreInsideTheLoop()
+                .ToString();
         }
     }
 }
