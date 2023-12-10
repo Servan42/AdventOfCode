@@ -10,7 +10,10 @@ namespace AdventOfCode2023.Core.Daily.Day10
     {
         public override void ComputePart1()
         {
-            throw new NotImplementedException();
+            Output = PipeMaze
+                .Parse(InputLines)
+                .GetNbStepsToNavigateToFarthestPoint()
+                .ToString();
         }
 
         public override void ComputePart2()

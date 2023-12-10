@@ -65,13 +65,13 @@ namespace AdventOfCode2023.Tests
         public void Should_find_nb_steps_to_get_from_start_to_farthest_point(List<string> inputLines, string expectedResult)
         {
             // GIVEN
-            sut.InputLines = mazeLoopNoExtraPipes;
+            sut.InputLines = inputLines;
 
             // WHEN
             sut.ComputePart1();
 
             // THEN
-            Assert.That(sut.Output, Is.EqualTo("4"));
+            Assert.That(sut.Output, Is.EqualTo(expectedResult));
         }
 
         [Test]
