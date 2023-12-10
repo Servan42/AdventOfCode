@@ -73,5 +73,59 @@ namespace AdventOfCode2023.Tests
             // THEN
             Assert.That(sut.Output, Is.EqualTo("4"));
         }
+
+        [Test]
+        public void Should_parse_maze_from_inputLines_simple_maze_loop_no_extra_pipes()
+        {
+            // WHEN
+            var pipeMaze = PipeMaze.Parse(mazeLoopNoExtraPipes);
+
+            // THEN
+            Assert.That(pipeMaze.GetNodesCount(), Is.EqualTo(8));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,1"), pipeMaze.GetNode("1,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,2"), pipeMaze.GetNode("1,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,3"), pipeMaze.GetNode("2,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,3"), pipeMaze.GetNode("3,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,3"), pipeMaze.GetNode("3,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,2"), pipeMaze.GetNode("3,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,1"), pipeMaze.GetNode("2,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,1"), pipeMaze.GetNode("1,1")));
+            // bidirectional
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,2"), pipeMaze.GetNode("1,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,3"), pipeMaze.GetNode("1,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,3"), pipeMaze.GetNode("1,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,3"), pipeMaze.GetNode("2,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,2"), pipeMaze.GetNode("3,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,1"), pipeMaze.GetNode("3,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,1"), pipeMaze.GetNode("3,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,1"), pipeMaze.GetNode("2,1")));
+        }
+
+        [Test]
+        public void Should_parse_maze_from_inputLines_simple_maze_loop_With_extra_pipes()
+        {
+            // WHEN
+            var pipeMaze = PipeMaze.Parse(mazeLoopWithExtraPipes);
+
+            // THEN
+            Assert.That(pipeMaze.GetNodesCount(), Is.EqualTo(25));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,1"), pipeMaze.GetNode("1,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,2"), pipeMaze.GetNode("1,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,3"), pipeMaze.GetNode("2,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,3"), pipeMaze.GetNode("3,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,3"), pipeMaze.GetNode("3,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,2"), pipeMaze.GetNode("3,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,1"), pipeMaze.GetNode("2,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,1"), pipeMaze.GetNode("1,1")));
+            // bidirectional
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,2"), pipeMaze.GetNode("1,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,3"), pipeMaze.GetNode("1,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,3"), pipeMaze.GetNode("1,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,3"), pipeMaze.GetNode("2,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,2"), pipeMaze.GetNode("3,3")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("3,1"), pipeMaze.GetNode("3,2")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("2,1"), pipeMaze.GetNode("3,1")));
+            Assert.DoesNotThrow(() => pipeMaze.GetEdgeWeight(pipeMaze.GetNode("1,1"), pipeMaze.GetNode("2,1")));
+        }
     }
 }
