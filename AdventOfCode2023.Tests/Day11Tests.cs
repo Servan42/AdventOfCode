@@ -115,37 +115,6 @@ namespace AdventOfCode2023.Tests
             Assert.That(universe.Galaxies.Count, Is.EqualTo(9));
         }
 
-        [Test]
-        public void Should_generate_pairs()
-        {
-            // Given
-            List<string> input = new List<string>
-            {
-                "#.#",
-                "...",
-                "#.#"
-            };
-
-            // When
-            var universe = Universe.Parse(input);
-
-            // Then
-            Assert.That(universe.GalaxyPairs.Count, Is.EqualTo(6));
-        }
-
-        [Test]
-        public void Should_generate_pairs_from_example()
-        {
-            // Given
-            List<string> input = universeExample;
-
-            // When
-            var universe = Universe.Parse(input);
-
-            // Then
-            Assert.That(universe.GalaxyPairs.Count, Is.EqualTo(36));
-        }
-
         [TestCase("0,4", "10,9", 15)]
         [TestCase("2,0", "7,12", 17)]
         [TestCase("11,0", "11,5", 5)]

@@ -14,7 +14,6 @@ namespace AdventOfCode2023.Core.Daily.Day11
     {
         public List<string> Grid { get; set; }
         public List<(INode, INode)> GalaxyPairs { get; set; } = new List<(INode, INode)>();
-        public List<(string, string)> GalaxyPairsIds { get; set; } = new List<(string, string)>();
         public List<INode> Galaxies { get; set; } = new List<INode>();
 
         public Universe(List<string> grid)
@@ -27,19 +26,12 @@ namespace AdventOfCode2023.Core.Daily.Day11
             var universe = new Universe(input);
             universe.Expand();
             universe.FillNodeGraph();
-            universe.FindGalaxyPairs();
             return universe;
         }
 
-        public int GetSumOfShortestPathForAllPairsOfGalaxies()
+        public double GetSumOfShortestPathForAllPairsOfGalaxies()
         {
-            return GalaxyPairs
-                .Select(pair => this.AstarAlgorithm(pair.Item1, pair.Item2).Count - 1)
-                .Sum();
-        }
-
-        private void FindGalaxyPairs()
-        {
+            double sum = 0;
             foreach (var galaxyA in Galaxies)
             {
                 foreach (var galaxyB in Galaxies)
@@ -47,9 +39,12 @@ namespace AdventOfCode2023.Core.Daily.Day11
                     if (!GalaxyPairs.Contains((galaxyB, galaxyA)) && galaxyB != galaxyA)
                     {
                         GalaxyPairs.Add((galaxyA, galaxyB));
+                        sum += this.HeuristicSearch(galaxyA, galaxyB).Count - 1;
                     }
                 }
             }
+
+            return sum;
         }
 
         private void FillNodeGraph()
