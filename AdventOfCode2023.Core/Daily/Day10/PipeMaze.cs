@@ -3,6 +3,7 @@ using PathFinder.API.Interfaces;
 using PathFinder.API.Services;
 using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,10 +15,12 @@ namespace AdventOfCode2023.Core.Daily.Day10
         // "line,column" -> "0,0" on top left
 
         private Node startNode;
+        private List<string> pipeGrid;
 
         public static PipeMaze Parse(List<string> inputLines)
         {
             var pipeMaze = new PipeMaze();
+            pipeMaze.pipeGrid = inputLines;
 
             // Add nodes
             for (int row = 0; row < inputLines.Count; row++)
@@ -45,7 +48,7 @@ namespace AdventOfCode2023.Core.Daily.Day10
                     if (currentCase == '.')
                         continue;
 
-                    var sourceNode = (PipeNode) pipeMaze.GetNode($"{row},{column}");
+                    var sourceNode = (PipeNode)pipeMaze.GetNode($"{row},{column}");
                     var destinationNodes = sourceNode.GetDestinationsNodesIdentifiers(inputLines);
                     destinationNodes.ForEach(id =>
                     {
@@ -65,7 +68,7 @@ namespace AdventOfCode2023.Core.Daily.Day10
             INode lastLeftNode = startNode;
             INode lastRightNode = startNode;
 
-            while(leftNode.GetUniqueIdentifier() != rightNode.GetUniqueIdentifier())
+            while (leftNode.GetUniqueIdentifier() != rightNode.GetUniqueIdentifier())
             {
                 INode newLeftNode = this.GetNeighbors(leftNode).First(n => n.GetUniqueIdentifier() != lastLeftNode.GetUniqueIdentifier());
                 lastLeftNode = leftNode;
@@ -84,16 +87,85 @@ namespace AdventOfCode2023.Core.Daily.Day10
         public int GetNbTilesThatAreInsideTheLoop()
         {
             FlagNodesThatArePartOfTheLoop();
-            throw new NotImplementedException("Find tiles enclosed by the loop");
+
+            int nbTilesInsideLoop = 0;
+            for (int row = 0; row < pipeGrid.Count; row++)
+            {
+                bool isCurrentlyInsideLoop = false;
+                char chainStarter = '.';
+                for (int column = 0; column < pipeGrid[row].Length; column++)
+                {
+                    char currentChar = pipeGrid[row][column];
+                    if (IsNodePartOfMainLoop(row, column))
+                    {
+                        bool isCurrentlyOnTheLastNodeOfTheChain = IsCurrentlyOnTheLastNodeOfTheChain(row, column);
+                        bool isCurrentlyOnTheFirstNodeOfTheChain = IsCurrentlyOnTheFirstNodeOfTheChain(row, column);
+
+                        if (currentChar == '|')
+                            isCurrentlyInsideLoop = !isCurrentlyInsideLoop;
+                        else if (isCurrentlyOnTheLastNodeOfTheChain)
+                        {
+                            if (chainStarter == 'L'  && currentChar == '7'
+                                || chainStarter == 'F' && currentChar == 'J')
+                                isCurrentlyInsideLoop = !isCurrentlyInsideLoop;
+                        }
+                        else if (isCurrentlyOnTheFirstNodeOfTheChain)
+                        {
+                            chainStarter = currentChar;
+                        }
+                    }
+                    else
+                    {
+                        if (isCurrentlyInsideLoop) nbTilesInsideLoop++;
+                    }
+                }
+            }
+
+            return nbTilesInsideLoop;
+        }
+
+        private bool IsCurrentlyOnTheFirstNodeOfTheChain(int row, int column)
+        {
+            if (column <= 0)
+                return true;
+
+            var previousNode = this.GetNode($"{row},{column - 1}");
+            if (previousNode == null)
+                return true;
+
+            var currentNode = this.GetNode($"{row},{column}");
+            var neighbors = this.GetNeighbors(currentNode);
+            return !neighbors.Any(n => n.GetUniqueIdentifier() == previousNode.GetUniqueIdentifier());
+        }
+
+        private bool IsCurrentlyOnTheLastNodeOfTheChain(int row, int column)
+        {
+            if (column >= pipeGrid[0].Length - 1)
+                return true;
+
+            var nextNode = this.GetNode($"{row},{column + 1}");
+            if (nextNode == null)
+                return true;
+
+            var currentNode = this.GetNode($"{row},{column}");
+            var neighbors = this.GetNeighbors(currentNode);
+            return !neighbors.Any(n => n.GetUniqueIdentifier() == nextNode.GetUniqueIdentifier());
+        }
+
+        private bool IsNodePartOfMainLoop(int row, int column)
+        {
+            var node = this.GetNode($"{row},{column}");
+            if (node == null) return false;
+            return ((PipeNode)node).IsPartOfMainLoop;
         }
 
         private void FlagNodesThatArePartOfTheLoop()
         {
-            ((PipeNode) startNode).IsPartOfMainLoop = true;
+            ((PipeNode)startNode).IsPartOfMainLoop = true;
             INode lastNode = startNode;
             INode currentNode = this.GetNeighbors(startNode).First();
 
-            while(currentNode.GetUniqueIdentifier() != startNode.GetUniqueIdentifier()) 
+            while (currentNode.GetUniqueIdentifier() != startNode.GetUniqueIdentifier())
             {
                 ((PipeNode)currentNode).IsPartOfMainLoop = true;
                 INode newNode = this.GetNeighbors(currentNode).First(n => n.GetUniqueIdentifier() != lastNode.GetUniqueIdentifier());

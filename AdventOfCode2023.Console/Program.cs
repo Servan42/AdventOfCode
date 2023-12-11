@@ -9,7 +9,7 @@ internal class Program
     {
         var exercise = new Day10Ex();
         exercise.LoadInputFromFile("input.txt");
-        exercise.ComputePart1();
+        exercise.ComputePart2();
         Console.WriteLine(exercise.Output);
         exercise.SaveOutputToFile("output.txt");
         Console.ReadKey();
