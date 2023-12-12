@@ -32,57 +32,6 @@ namespace AdventOfCode2023.Tests
         };
 
         [Test]
-        public void Should_expand_universe()
-        {
-            // Given
-            List<string> input = new List<string>
-            {
-                "#.#",
-                "...",
-                "#.#"
-            };
-
-            // When
-            var universe = Universe.Parse(input);
-
-            // Then
-            CollectionAssert.AreEqual(new List<string>
-            {
-                "#..#",
-                "....",
-                "....",
-                "#..#",
-            }, universe.Grid);
-        }
-
-        [Test]
-        public void Should_expand_universe_from_example()
-        {
-            // Given
-            List<string> input = universeExample;
-
-            // When
-            var universe = Universe.Parse(input);
-
-            // Then
-            CollectionAssert.AreEqual(new List<string>
-            {
-                "....#........",
-                ".........#...",
-                "#............",
-                ".............",
-                ".............",
-                "........#....",
-                ".#...........",
-                "............#",
-                ".............",
-                ".............",
-                ".........#...",
-                "#....#......."
-            }, universe.Grid);
-        }
-
-        [Test]
         public void Part1_Should_Get_Sum_Of_Shortest_Path_For_All_Pairs_Of_Galaxies()
         {
             // GIVEN

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
@@ -11,8 +12,8 @@ namespace AdventOfCode2023.Core.Daily.Day11
     public class Universe
     {
         public List<string> Grid { get; set; }
-        public List<((double, double), (double, double))> GalaxyPairsByCoord { get; set; } = new List<((double, double), (double, double))>();
-        public List<(double, double)> GalaxiesByCoord { get; set; } = new List<(double, double)>();
+        public List<(Galaxy, Galaxy)> GalaxyPairsByCoord { get; set; } = new List<(Galaxy, Galaxy)>();
+        public List<Galaxy> GalaxiesByCoord { get; set; } = new List<Galaxy>();
 
         public Universe(List<string> grid)
         {
@@ -22,11 +23,27 @@ namespace AdventOfCode2023.Core.Daily.Day11
         public static Universe Parse(List<string> input, int expansionFactor = 2)
         {
             var universe = new Universe(input);
-            universe.Expand(expansionFactor);
             universe.FillGalaxyList();
             Console.WriteLine("Graph initialized");
+            universe.Expand(expansionFactor);
             return universe;
         }
+
+        //private void DebugPrintGalaxies()
+        //{
+        //    for(int i = 0; i < GalaxiesByCoord.Max(g => g.ExpandedCoodRow) + 1; i++)
+        //    {
+        //        for(int j = 0; j < GalaxiesByCoord.Max(g => g.ExpandedCoodColumn) + 1; j++)
+        //        {
+        //            if (GalaxiesByCoord.Count(g => g.ExpandedCoodRow == i && g.ExpandedCoodColumn == j) == 1)
+        //                Console.Write("#");
+        //            else
+        //                Console.Write(".");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //    Console.WriteLine();
+        //}
 
         private void FillGalaxyList()
         {
@@ -35,7 +52,7 @@ namespace AdventOfCode2023.Core.Daily.Day11
                 if (!Grid[row].Contains('#')) continue;
                 for (int column = 0; column < Grid[row].Length; column++)
                 {
-                    if (Grid[row][column] == '#') GalaxiesByCoord.Add((row, column));
+                    if (Grid[row][column] == '#') GalaxiesByCoord.Add(new Galaxy(row, column));
                 }
             }
         }
@@ -61,45 +78,51 @@ namespace AdventOfCode2023.Core.Daily.Day11
 
         private void Expand(int expansionFactor)
         {
-            var expandedInColumns = new List<string>();
-            foreach (var row in Grid)
+            for(int rowNum = 0; rowNum < Grid.Count; rowNum++)
             {
-                var newRow = new StringBuilder();
-                for (int column = 0; column < row.Length; column++)
+                for (int column = 0; column < Grid[rowNum].Length; column++)
                 {
-                    newRow.Append(row[column]);
                     if (ColumnMustBeExpanded(column))
                     {
-                        for (int i = 1; i < expansionFactor; i++)
-                            newRow.Append(row[column]);
+                        AddExpansionToRegisteredGalaxies(rowNum, column, expansionFactor, true);
                     }
                 }
-                expandedInColumns.Add(newRow.ToString());
             }
             Console.WriteLine("Expanded in columns");
-            Grid = expandedInColumns;
-            var expandedInRows = new List<string>();
-            foreach (var row in Grid)
+
+            for (int rowNum = 0; rowNum < Grid.Count; rowNum++)
             {
-                expandedInRows.Add(row);
-                if (!row.Contains('#'))
+                if (!Grid[rowNum].Contains('#'))
                 {
-                    for (int i = 1; i < expansionFactor; i++)
-                        expandedInRows.Add(row);
+                    AddExpansionToRegisteredGalaxies(rowNum, 0, expansionFactor, false);
                 }
             }
             Console.WriteLine("Expanded in rows");
-            Grid = expandedInRows;
+        }
+
+        private void AddExpansionToRegisteredGalaxies(int row, int column, int expansionFactor, bool expandInColumn)
+        {
+            foreach (var galaxy in GalaxiesByCoord)
+            {
+                if (expandInColumn && galaxy.CoodRow == row && galaxy.CoodColumn > column)
+                {
+                    galaxy.ExpandedCoodColumn += (expansionFactor - 1);
+                }
+                else if(!expandInColumn && galaxy.CoodRow > row)
+                {
+                    galaxy.ExpandedCoodRow += (expansionFactor - 1);
+                }
+            }
         }
 
         private bool ColumnMustBeExpanded(int column)
         {
             return Grid.Count(row => row[column] == '#') == 0;
         }
-        
-        private double GetHeuristicDistanceToGoal((double, double) galaxyA, (double, double) galaxyB)
+
+        private double GetHeuristicDistanceToGoal(Galaxy galaxyA, Galaxy galaxyB)
         {
-            return Math.Abs(galaxyA.Item1 - galaxyB.Item1) + Math.Abs(galaxyA.Item2 - galaxyB.Item2);
+            return Math.Abs(galaxyA.ExpandedCoodRow - galaxyB.ExpandedCoodRow) + Math.Abs(galaxyA.ExpandedCoodColumn - galaxyB.ExpandedCoodColumn);
         }
     }
 }
