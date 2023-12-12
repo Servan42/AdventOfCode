@@ -15,7 +15,7 @@ namespace AdventOfCode2023.Core.Daily.Day11
 
         public override void ComputePart2()
         {
-            throw new NotImplementedException();
+            Output = Universe.Parse(InputLines, 1000000).GetSumOfShortestPathForAllPairsOfGalaxies().ToString();
         }
     }
 }
