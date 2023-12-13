@@ -64,6 +64,24 @@ namespace AdventOfCode2023.Tests
             Assert.That(nb, Is.EqualTo(expectedNb));
         }
 
+        [TestCase("???.### 1,1,3", 1)]
+        [TestCase(".??..??...?##. 1,1,3", 4)]
+        [TestCase("?#?#?#?#?#?#?#? 1,3,1,6", 1)]
+        [TestCase("????.#...#... 4,1,1", 1)]
+        [TestCase("????.######..#####. 1,6,5", 4)]
+        [TestCase("?###???????? 3,2,1", 10)]
+        public void Should_get_nb_arrangements_recursive(string inputLine, int expectedNb)
+        {
+            // GIVEN
+            var springGroup = SpringGroup.Parse(inputLine);
+
+            // WHEN
+            var nb = springGroup.GetNbArrangementsRecursive();
+
+            // THEN
+            Assert.That(nb, Is.EqualTo(expectedNb));
+        }
+
         [Test]
         public void Should_sum_for_part1()
         {
@@ -94,6 +112,24 @@ namespace AdventOfCode2023.Tests
             // WHEN
             Assert.That(springGroup.Springs, Is.EqualTo(unfoldedSprings.Split(' ')[0]));
             Assert.That(springGroup.DamagedSpringSizes, Is.EqualTo(unfoldedSprings.Split(' ')[1]));
+        }
+
+        [TestCase("???.### 1,1,3", 1)]
+        [TestCase(".??..??...?##. 1,1,3", 16384)]
+        [TestCase("?#?#?#?#?#?#?#? 1,3,1,6", 1)]
+        [TestCase("????.#...#... 4,1,1", 16)]
+        [TestCase("????.######..#####. 1,6,5", 2500)]
+        [TestCase("?###???????? 3,2,1", 506250)]
+        public void Should_get_nb_arrangements_recursive_when_unfolded(string inputLine, int expectedNb)
+        {
+            // GIVEN
+            var springGroup = SpringGroup.Parse(inputLine, true);
+
+            // WHEN
+            var nb = springGroup.GetNbArrangementsRecursive();
+
+            // THEN
+            Assert.That(nb, Is.EqualTo(expectedNb));
         }
     }
 }
