@@ -10,38 +10,33 @@ namespace AdventOfCode2023.Core.Daily.Day14
     {
         public override void ComputePart1()
         {
-            char[,] tiltedGrid = ToCharArray(InputLines.ToArray());
-            int rowLength = InputLines.Count;
-            int colLength = InputLines[0].Length;
-            Output = TiltNorth(tiltedGrid, rowLength, colLength).ToString();
+            Output = TiltNorth(InputLines.ToCharArray()).ToString();
         }
 
         public override void ComputePart2()
         {
-            int rowLength = InputLines.Count;
-            int colLength = InputLines[0].Length;
-            char[,] tiltedGrid = ToCharArray(InputLines.ToArray());
+            char[,] tiltedGrid = InputLines.ToCharArray();
 
-            int loadEast;
             Dictionary<string, int> history = new Dictionary<string, int>();
             int firstCyclelengh = 0;
             int lastCycleLength = 0;
             for (int cycle = 0; cycle < 1000000000; cycle++)
             {
-                TiltNorth(tiltedGrid, rowLength, colLength);
-                TiltWest(tiltedGrid, rowLength, colLength);
-                TiltSouth(tiltedGrid, rowLength, colLength);
-                loadEast = TiltEast(tiltedGrid, rowLength, colLength);
-                if (cycle % 10000 == 0) Console.WriteLine(cycle * 100.0 / 1000000000.0);
-                //Console.WriteLine(PrintGrid(rowLength, colLength, tiltedGrid));
-                string key = CharArray2DToString(tiltedGrid);
+                TiltNorth(tiltedGrid);
+                TiltWest(tiltedGrid);
+                TiltSouth(tiltedGrid);
+                int loadEast = TiltEast(tiltedGrid);
+                string key = tiltedGrid.ToFlatString();
+
                 if (history.ContainsKey(key))
                 {
                     if (firstCyclelengh == 0) firstCyclelengh = cycle;
-                    if (lastCycleLength == history.Count) break;
+                    if (lastCycleLength == history.Count)
+                        break;
                     lastCycleLength = history.Count;
                     history.Clear();
                 }
+
                 history.Add(key, loadEast);
             }
 
@@ -49,76 +44,18 @@ namespace AdventOfCode2023.Core.Daily.Day14
             Output = history.Values.ElementAt(index).ToString();
         }
 
-        public void D14()
+        private static int TiltNorth(char[,] gridToTilt)
         {
-            var inputLines = File.ReadAllLines("AoC/input.txt");
-            int rowLength = inputLines.Length;
-            int colLength = inputLines[0].Length;
-            char[,] tiltedGrid = ToCharArray(inputLines);
-
-            int loadEast = 0;
-            int firstLoadNorth = 0;
-            Dictionary<string, int> history = new Dictionary<string, int>();
-            int lastCycleLength = 0;
-            for (double cycle = 0; cycle < 1000000000.0; cycle++)
-            {
-                //if(cycle == 0) firstLoadNorth = TiltNorth(tiltedGrid, rowLength, colLength);
-                TiltNorth(tiltedGrid, rowLength, colLength);
-                TiltWest(tiltedGrid, rowLength, colLength);
-                TiltSouth(tiltedGrid, rowLength, colLength);
-                loadEast = TiltEast(tiltedGrid, rowLength, colLength);
-                if (cycle % 10000 == 0) Console.WriteLine(cycle * 100.0 / 1000000000.0);
-                //Console.WriteLine(PrintGrid(rowLength, colLength, tiltedGrid));
-                string key = CharArray2DToString(tiltedGrid);
-                if (history.ContainsKey(key))
-                {
-                    Console.WriteLine($"key already present. cycle {cycle}. cycle lengh {history.Count}, clear");
-                    if (lastCycleLength == history.Count) break;
-                    lastCycleLength = history.Count;
-                    history.Clear();
-                }
-                history.Add(key, loadEast);
-            }
-
-            Console.WriteLine((1000000000.0 - 119) % 7);
-            //Console.WriteLine(history[(1000000000.0 - i) % (history.Count - i) + i]);
-            Console.WriteLine(history.First().Value);
-            //Console.WriteLine(loadNorth == 109665);
-            Console.WriteLine(firstLoadNorth == 136);
-            Console.WriteLine(loadEast == 64);
-            //Console.WriteLine(loadEast == 96061); index 5
-            //Console.WriteLine(PrintGrid(rowLength, colLength, tiltedGrid));
-
-            Console.WriteLine(loadEast);
-            Console.ReadLine();
-        }
-
-        public static string CharArray2DToString(char[,] chars)
-        {
-            StringBuilder stringBuilder = new StringBuilder();
-            for (int i = 0; i < chars.GetLength(0); i++)
-            {
-                for (int j = 0; j < chars.GetLength(1); j++)
-                {
-                    stringBuilder.Append(chars[i, j]);
-                }
-            }
-            return stringBuilder.ToString();
-        }
-
-        private static int TiltNorth(char[,] gridToTilt, int rowLength, int colLength)
-        {
-            int[] lastEmptyIndex = new int[colLength];
+            int[] lastEmptyIndex = new int[gridToTilt.NbColumns()];
             int load = 0;
-            for (int row = 0; row < rowLength; row++)
+            for (int row = 0; row < gridToTilt.NbRows(); row++)
             {
-                for (int col = 0; col < colLength; col++)
+                for (int col = 0; col < gridToTilt.NbColumns(); col++)
                 {
                     char currentChar = gridToTilt[row, col];
                     if (currentChar == '.')
-                    {
-                        lastEmptyIndex[col] = Math.Min(lastEmptyIndex[col], row);
-                    }
+                        continue;
+
                     else if (currentChar == '#')
                     {
                         lastEmptyIndex[col] = row + 1;
@@ -127,12 +64,12 @@ namespace AdventOfCode2023.Core.Daily.Day14
                     {
                         if (lastEmptyIndex[col] == row)
                         {
-                            load += rowLength - row;
+                            load += gridToTilt.NbRows() - row;
                             lastEmptyIndex[col] = row + 1;
                         }
                         else
                         {
-                            load += rowLength - lastEmptyIndex[col];
+                            load += gridToTilt.NbRows() - lastEmptyIndex[col];
                             gridToTilt[lastEmptyIndex[col], col] = currentChar;
                             gridToTilt[row, col] = '.';
                             lastEmptyIndex[col]++;
@@ -144,18 +81,17 @@ namespace AdventOfCode2023.Core.Daily.Day14
             return load;
         }
 
-        private static void TiltSouth(char[,] gridToTilt, int rowLength, int colLength)
+        private static void TiltSouth(char[,] gridToTilt)
         {
-            int[] lastEmptyIndex = Enumerable.Repeat(rowLength - 1, colLength).ToArray();
-            for (int row = rowLength - 1; row >= 0; row--)
+            int[] lastEmptyIndex = Enumerable.Repeat(gridToTilt.NbRows() - 1, gridToTilt.NbColumns()).ToArray();
+            for (int row = gridToTilt.NbRows() - 1; row >= 0; row--)
             {
-                for (int col = 0; col < colLength; col++)
+                for (int col = 0; col < gridToTilt.NbColumns(); col++)
                 {
                     char currentChar = gridToTilt[row, col];
                     if (currentChar == '.')
-                    {
-                        lastEmptyIndex[col] = Math.Max(lastEmptyIndex[col], row);
-                    }
+                        continue;
+
                     else if (currentChar == '#')
                     {
                         lastEmptyIndex[col] = row - 1;
@@ -177,18 +113,17 @@ namespace AdventOfCode2023.Core.Daily.Day14
             }
         }
 
-        private static void TiltWest(char[,] gridToTilt, int rowLength, int colLength)
+        private static void TiltWest(char[,] gridToTilt)
         {
-            int[] lastEmptyIndex = new int[colLength];
-            for (int col = 0; col < colLength; col++)
+            int[] lastEmptyIndex = new int[gridToTilt.NbColumns()];
+            for (int col = 0; col < gridToTilt.NbColumns(); col++)
             {
-                for (int row = 0; row < rowLength; row++)
+                for (int row = 0; row < gridToTilt.NbRows(); row++)
                 {
                     char currentChar = gridToTilt[row, col];
                     if (currentChar == '.')
-                    {
-                        lastEmptyIndex[row] = Math.Min(lastEmptyIndex[row], col);
-                    }
+                        continue;
+
                     else if (currentChar == '#')
                     {
                         lastEmptyIndex[row] = col + 1;
@@ -210,26 +145,25 @@ namespace AdventOfCode2023.Core.Daily.Day14
             }
         }
 
-        private static int TiltEast(char[,] gridToTilt, int rowLength, int colLength)
+        private static int TiltEast(char[,] gridToTilt)
         {
             int load = 0;
-            int[] lastEmptyIndex = Enumerable.Repeat(colLength - 1, rowLength).ToArray();
-            for (int col = colLength - 1; col >= 0; col--)
+            int[] lastEmptyIndex = Enumerable.Repeat(gridToTilt.NbColumns() - 1, gridToTilt.NbRows()).ToArray();
+            for (int col = gridToTilt.NbColumns() - 1; col >= 0; col--)
             {
-                for (int row = 0; row < rowLength; row++)
+                for (int row = 0; row < gridToTilt.NbRows(); row++)
                 {
                     char currentChar = gridToTilt[row, col];
                     if (currentChar == '.')
-                    {
-                        lastEmptyIndex[row] = Math.Max(lastEmptyIndex[row], col);
-                    }
+                        continue;
+                    
                     else if (currentChar == '#')
                     {
                         lastEmptyIndex[row] = col - 1;
                     }
                     else
                     {
-                        load += rowLength - row;
+                        load += gridToTilt.NbRows() - row;
                         if (lastEmptyIndex[row] == col)
                         {
                             lastEmptyIndex[row] = col - 1;
@@ -244,33 +178,6 @@ namespace AdventOfCode2023.Core.Daily.Day14
                 }
             }
             return load;
-        }
-
-        private static string PrintGrid(int rowLength, int colLength, char[,] tiltedGrid)
-        {
-            StringBuilder sb = new StringBuilder();
-            for (int row = 0; row < rowLength; row++)
-            {
-                for (int col = 0; col < colLength; col++)
-                {
-                    sb.Append(tiltedGrid[row, col]);
-                }
-                sb.AppendLine();
-            }
-            return sb.ToString();
-        }
-
-        public static char[,] ToCharArray(string[] stringArray)
-        {
-            var result = new char[stringArray.Length, stringArray[0].Length];
-            for (int i = 0; i < stringArray.Length; i++)
-            {
-                for (int j = 0; j < stringArray[0].Length; j++)
-                {
-                    result[i, j] = stringArray[i][j];
-                }
-            }
-            return result;
         }
     }
 }
