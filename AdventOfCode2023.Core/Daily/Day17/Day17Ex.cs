@@ -11,36 +11,67 @@ namespace AdventOfCode2023.Core.Daily.Day17
     {
         public override void ComputePart1()
         {
-            // 839 too high
-
-            Output = City.ComputeOptimalHeat(0, 0, InputLines.Count - 1, InputLines[0].Length - 1, InputLines).ToString();
-
-            //var city = City.Parse(InputLines);
-            //var path = city.FindOptimalPathWithMovementConstraint(city.GetNode("0,0"), city.GetNode($"{InputLines.Count - 1},{InputLines[0].Length - 1}"));
-            ////path.ForEach(n => Console.WriteLine($"{n.GetUniqueIdentifier()}  {((CityBlock)n).Heat}"));
-            //Console.WriteLine(path.Skip(1).Sum(n => ((CityBlock)n).Heat));
-            
-            //for (int i = 0; i < InputLines.Count; i++)
-            //{
-            //    for (int j = 0; j < InputLines[0].Length; j++)
-            //    {
-            //        if (path.Select(n => n.GetUniqueIdentifier()).Contains($"{i},{j}"))
-            //        { 
-            //            Console.ForegroundColor = ConsoleColor.Red;
-            //            Console.Write(InputLines[i][j]);
-            //            Console.ForegroundColor = ConsoleColor.White;
-            //        }
-            //        else
-            //            Console.Write(InputLines[i][j]);
-            //    }
-            //    Console.WriteLine();
-            //}
+            Output = ComputeOptimalHeat(0, 0, InputLines.Count - 1, InputLines[0].Length - 1, InputLines, false).ToString();
         }
 
         public override void ComputePart2()
         {
-            Output = City.ComputeOptimalHeat_Part2(0, 0, InputLines.Count - 1, InputLines[0].Length - 1, InputLines).ToString();
+            Output = ComputeOptimalHeat(0, 0, InputLines.Count - 1, InputLines[0].Length - 1, InputLines, true).ToString();
+        }
 
+        public int ComputeOptimalHeat(int startRow, int startCol, int endRow, int endCol, List<string> inputLines, bool isPart2)
+        {
+            var seen = new List<string>();
+            var priorityQueue = new PriorityQueue<Crucible, int>();
+
+            priorityQueue.Enqueue(new Crucible(
+                totalHeat: 0,
+                currentRow: startRow,
+                currentCol: startCol,
+                movementCol: 0,
+                movementRow: 0,
+                nbStepsInSameDirection: 0
+            ), 0);
+
+            while (priorityQueue.Count > 0)
+            {
+                var crucible = priorityQueue.Dequeue();
+
+                if (crucible.HasArrivedToDestination(endRow, endCol) 
+                    && (!isPart2 || isPart2 && crucible.IsAllowedToStopOrSteer()))
+                    return crucible.TotalHeat;
+
+                if (seen.Contains(crucible.UniqueKey()))
+                    continue;
+
+                seen.Add(crucible.UniqueKey());
+
+                if (crucible.CanContinueMovingForward(isPart2) && crucible.IsMoving())
+                {
+                    if (crucible.IsNextPositionInBounds(inputLines))
+                    {
+                        var nextStep = crucible.GetNextStepCrucibleMovingForward(inputLines);
+                        priorityQueue.Enqueue(nextStep, nextStep.TotalHeat);
+                    }
+                }
+
+                if (isPart2 && !crucible.IsAllowedToStopOrSteer() && crucible.IsMoving())
+                    continue;
+
+                foreach (var direction in new List<(int alongRow, int alongCol)> { (-1, 0), (1, 0), (0, -1), (0, 1) })
+                {
+                    if (!crucible.WillSteerIfThisDirectionIsApplied(direction))
+                        continue;
+
+                    if (crucible.IsNextPositionInBoundsAfterSteering(inputLines, direction))
+                    {
+                        var nextStep = crucible.GetNextStepCrucibleSteering(inputLines, direction);
+                        priorityQueue.Enqueue(nextStep, nextStep.TotalHeat);
+                    }
+                }
+            }
+
+            throw new Exception("Crucible did not reach the destination");
         }
     }
 }
