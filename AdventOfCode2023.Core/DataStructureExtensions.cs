@@ -55,6 +55,24 @@ namespace AdventOfCode2023.Core
         /// <summary>
         /// O(n²)
         /// </summary>
+        public static string ToFlatStringWithNewLinesAndDots(this char[,] chars)
+        {
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < chars.GetLength(0); i++)
+            {
+                for (int j = 0; j < chars.GetLength(1); j++)
+                {
+                    char current = chars[i, j];
+                    stringBuilder.Append(current == '\0' ? '.' : current);
+                }
+                stringBuilder.AppendLine();
+            }
+            return stringBuilder.ToString();
+        }
+
+        /// <summary>
+        /// O(n²)
+        /// </summary>
         public static char[,] ToCharArray(this List<string> stringList)
         {
             var result = new char[stringList.Count, stringList[0].Length];
