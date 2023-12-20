@@ -146,6 +146,9 @@ namespace AdventOfCode2023.Core.Daily.Day18
             }
             area = Math.Abs(area) / 2;
 
+            // This also works, we need to add the half squares of the permimeter ignored by shoelace, then add 1 as the sum of each perimeter area we're missing on corners.
+            //Output = (area + (boundaryPointsCount / 2.0) + 1.0).ToString();
+
             // Get inside area using Pick's theorem
             // https://en.wikipedia.org/wiki/Pick%27s_theorem
             double interiorArea = area - (boundaryPointsCount / 2.0) + 1.0;
