@@ -73,27 +73,25 @@ namespace AdventOfCode2023.Core.Daily.Day21
             var seen = new List<string>();
             List<string> reached = new();
 
-            fronteir.Enqueue((this.startNode, 0));
+            fronteir.Enqueue((this.startNode, totalNbSteps));
 
             while (fronteir.Count > 0)
             {
                 (INode currentNode, int distance) = fronteir.Dequeue();
-                string key = $"{currentNode.GetUniqueIdentifier()},{distance}";
+
+                string key = $"{currentNode.GetUniqueIdentifier()}";
                 if (seen.Contains(key))
                     continue;
 
                 seen.Add(key);
 
-                if (distance < totalNbSteps)
+                if (distance % 2 == 0) reached.Add(currentNode.ToString());
+                if (distance == 0) continue;
+
+                foreach (var neighbor in this.GetNeighbors(currentNode))
                 {
-                    foreach (var neighbor in this.GetNeighbors(currentNode))
-                    {
-                        fronteir.Enqueue((neighbor, distance + 1));
-                    }
+                    fronteir.Enqueue((neighbor, distance - 1));
                 }
-                else if (!reached.Contains(currentNode.GetUniqueIdentifier()))
-                    reached.Add(currentNode.GetUniqueIdentifier());
-                    
             }
 
             return reached.Count;
