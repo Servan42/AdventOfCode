@@ -67,13 +67,16 @@ namespace AdventOfCode2023.Core.Daily.Day21
             }
         }
 
-        public int Walk(int totalNbSteps)
+        public int Walk(int totalNbSteps, string startNodeItendifier = "")
         {
             var fronteir = new Queue<(INode, int)>();
             var seen = new List<string>();
             List<string> reached = new();
 
-            fronteir.Enqueue((this.startNode, totalNbSteps));
+            if (string.IsNullOrEmpty(startNodeItendifier))
+                fronteir.Enqueue((this.startNode, totalNbSteps));
+            else
+                fronteir.Enqueue((this.GetNode(startNodeItendifier), totalNbSteps));
 
             while (fronteir.Count > 0)
             {
