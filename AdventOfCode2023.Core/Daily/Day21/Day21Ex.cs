@@ -26,10 +26,10 @@ namespace AdventOfCode2023.Core.Daily.Day21
         {
             AssertInputDataAssumption();
             var sqSize = InputLines.Count;
-            var steps = 26501365;
+            double steps = 26501365;
             (int row, int col) startPoint = (sqSize / 2, sqSize / 2);
 
-            var reachableSqSize = (steps / sqSize) - 1;
+            double reachableSqSize = (steps / sqSize) - 1;
 
             // Counting the number of odd grids and even grids that are reachable with the given steps.
             // This does not count the edge cases, aka the grid that will not be fully explored on edges.
