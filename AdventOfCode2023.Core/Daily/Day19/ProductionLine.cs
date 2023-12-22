@@ -69,15 +69,7 @@ namespace AdventOfCode2023.Core.Daily.Day19
         private double ProcessBoundThroughWorkflow(Dictionary<string, (int lb, int ub)> bounds, string workflowKey)
         {
             if (workflowKey == "R") return 0;
-            if (workflowKey == "A")
-            {
-                double mult = 1;
-                foreach(var (lb, ub) in bounds.Values)
-                {
-                    mult *= (ub - lb + 1);
-                }
-                return mult;
-            }
+            if (workflowKey == "A") return bounds.Values.Select(b => (b.ub - b.lb + 1.0)).Mult();
 
             var workflow = Workflows[workflowKey];
             double total = 0.0;
