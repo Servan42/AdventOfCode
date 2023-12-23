@@ -12,6 +12,7 @@ namespace AdventOfCode2023.Core.Daily.Day22
         {
             var tower = Tower.Parse(InputLines);
             tower.MakeBlocksFall();
+            Output = tower.CountBricksThatAreSafeToDesintegrate().ToString();
         }
 
         public override void ComputePart2()

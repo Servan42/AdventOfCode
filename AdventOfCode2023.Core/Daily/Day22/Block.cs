@@ -47,6 +47,24 @@ namespace AdventOfCode2023.Core.Daily.Day22
             return Enumerable.Range(minY, 1 + maxY - minY).ToList();
         }
 
+        internal List<(int x, int y)> GetCoods()
+        {
+            var xs = GetXs();
+            var ys = GetYs();
+            if (xs.Count == 1)
+                return ys.Select(y => (xs.First(), y)).ToList();
+            else
+                return xs.Select(x => (x, ys.First())).ToList();
+        }
+
+        internal bool IsSupporting(Block blockAbove)
+        {
+            if (this.GetCoods().Any(thisCoods => blockAbove.GetCoods().Contains(thisCoods)))
+                return true;
+
+            return false;
+        }
+
         internal int MaxX()
         {
             return Math.Max(Extremity1.x, Extremity2.x);

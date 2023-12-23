@@ -34,11 +34,11 @@ namespace AdventOfCode2023.Core.Daily.Day22
                 var nb = GetByHowMuchLayersTheBlockCanFall(block);
                 block.FallBy(nb);
             }
-            for (int i = 0; i < blocks.Max(x => x.GetCurrentLayers().Max()) + 2; i++)
-            {
-                Console.WriteLine($"Layer {i}");
-                DebugPrintGrid(GetLayerAsGrid(i));
-            }
+            //for (int i = 0; i < blocks.Max(x => x.GetCurrentLayers().Max()) + 2; i++)
+            //{
+            //    Console.WriteLine($"Layer {i}");
+            //    DebugPrintGrid(GetLayerAsGrid(i));
+            //}
         }
 
         private int GetByHowMuchLayersTheBlockCanFall(Block block)
@@ -104,6 +104,43 @@ namespace AdventOfCode2023.Core.Daily.Day22
                 Console.WriteLine();
             }
             Console.WriteLine();
+        }
+
+        internal int CountBricksThatAreSafeToDesintegrate()
+        {
+            int count = 0;
+            foreach(var block in blocks)
+            {
+                if(CanBeDesintegrated(block))
+                    count++;
+            }
+            return count;
+        }
+
+        private bool CanBeDesintegrated(Block blockToDesintegrate)
+        {
+            var blocksOnLayerAbove = blocks.Where(b => b.GetCurrentLayers().Contains(blockToDesintegrate.Extremity2.z + 1));
+            if (!blocksOnLayerAbove.Any())
+                return true;
+
+            List<Block> supportedBlocks = new List<Block>();
+            foreach(var blockAbove in blocksOnLayerAbove)
+            {
+                if (blockToDesintegrate.IsSupporting(blockAbove))
+                    supportedBlocks.Add(blockAbove);
+            }
+
+            var backupExt1 = blockToDesintegrate.Extremity1;
+            var backupExt2 = blockToDesintegrate.Extremity2;
+            blockToDesintegrate.Extremity1 = (-1, -1, -1);
+            blockToDesintegrate.Extremity2 = (-1, -1, -1);
+
+            bool canBeDesintegrated = !supportedBlocks.Any(b => CanBlockFallOnLayer(backupExt2.z, b));
+
+            blockToDesintegrate.Extremity1 = backupExt1;
+            blockToDesintegrate.Extremity2 = backupExt2;
+
+            return canBeDesintegrated;
         }
     }
 }
