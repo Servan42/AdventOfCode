@@ -142,5 +142,34 @@ namespace AdventOfCode2023.Core.Daily.Day22
 
             return canBeDesintegrated;
         }
+
+        public double GetSumOfChainReactionsBruteForce()
+        {
+            return blocks.Sum(b => GetHowManyBlocksFallsWhenDesintegratingBlock(b));
+        }
+
+        public double GetHowManyBlocksFallsWhenDesintegratingBlock(Block blockToDesintegrate)
+        {
+            var backupBlocksRef = blocks;
+            blocks = blocks.Select(b => b.Clone()).ToList();
+
+            var localBlockToDesintegrate = blocks
+                .First(b => b.Extremity1 == blockToDesintegrate.Extremity1
+                    && b.Extremity2 == blockToDesintegrate.Extremity2);
+
+            blocks.Remove(localBlockToDesintegrate);
+
+            double fallCount = 0;
+            foreach (var block in blocks)
+            {
+                var nb = GetByHowMuchLayersTheBlockCanFall(block);
+                block.FallBy(nb);
+                if(nb > 0) fallCount++;
+            }
+
+
+            blocks = backupBlocksRef;
+            return fallCount;
+        }
     }
 }

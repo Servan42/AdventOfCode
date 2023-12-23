@@ -17,7 +17,9 @@ namespace AdventOfCode2023.Core.Daily.Day22
 
         public override void ComputePart2()
         {
-            throw new NotImplementedException();
+            var tower = Tower.Parse(InputLines);
+            tower.MakeBlocksFall();
+            Output = tower.GetSumOfChainReactionsBruteForce().ToString();
         }
     }
 }

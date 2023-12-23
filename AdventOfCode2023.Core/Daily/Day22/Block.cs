@@ -74,5 +74,13 @@ namespace AdventOfCode2023.Core.Daily.Day22
         {
             return Math.Max(Extremity1.y, Extremity2.y);
         }
+
+        public Block Clone()
+        {
+            var clone = new Block();
+            clone.Extremity1 = this.Extremity1;
+            clone.Extremity2 = this.Extremity2;
+            return clone;
+        }
     }
 }
