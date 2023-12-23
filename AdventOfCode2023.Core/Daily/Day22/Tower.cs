@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Reflection.Emit;
 using System.Text;
@@ -145,7 +146,20 @@ namespace AdventOfCode2023.Core.Daily.Day22
 
         public double GetSumOfChainReactionsBruteForce()
         {
-            return blocks.Sum(b => GetHowManyBlocksFallsWhenDesintegratingBlock(b));
+            double sum = 0;
+            int blockCount = 0;
+            var stopwatch = new Stopwatch();
+            foreach(var b in blocks)
+            {
+                stopwatch.Restart();
+                var count = GetHowManyBlocksFallsWhenDesintegratingBlock(b);
+
+                stopwatch.Stop();
+                Console.WriteLine($"Block {blockCount}/{blocks.Count} | {count} falls | {stopwatch.Elapsed}");
+                sum += count;
+                blockCount++;
+            }
+            return sum;
         }
 
         public double GetHowManyBlocksFallsWhenDesintegratingBlock(Block blockToDesintegrate)
