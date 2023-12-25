@@ -1,4 +1,4 @@
-﻿using AdventOfCode2023.Core.Daily.Day22;
+﻿using AdventOfCode2023.Core.Daily.Day23;
 
 internal class Program
 {
@@ -7,7 +7,7 @@ internal class Program
     /// </summary>
     private static void Main(string[] args)
     {
-        var exercise = new Day22Ex();
+        var exercise = new Day23Ex();
         exercise.LoadInputFromFile("input.txt");
         exercise.ComputePart2();
         Console.WriteLine(exercise.Output);
