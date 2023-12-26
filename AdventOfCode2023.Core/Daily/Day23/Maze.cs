@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode2023.Core.Daily.Day23
 {
-    internal class Maze : NodeGraph
+    public class Maze : NodeGraph
     {
         public List<string> InputLines { get; private set; }
         Dictionary<int, List<INode>> paths = new();
@@ -140,14 +140,35 @@ namespace AdventOfCode2023.Core.Daily.Day23
             while (myStack.Count > 0)
             {
                 (INode currentNode, int pathId, int segmentId, List<INode> prefixPath) = myStack.Pop();
-                //Console.Clear();
-                //DebugPrintPath(prefixPath);
                 Fill_no_stackoverflow(currentNode, pathId, segmentId, prefixPath);
-                //Console.Clear();
-                //DebugPrintPath(prefixPath);
             }
 
             return paths.Select(p => p.Value.Count).Max() - 1;
+        }
+
+        public int BuildPathsAndReturnLongest_no_stackoverflow_RAM_optimized()
+        {
+            INode destinationNode = GetDestinationNode();
+            int segementIdOfDestinationNode = keyCameFromValuesMultiSegments
+                        .Where(x => x.Value.ContainsKey(destinationNode.GetUniqueIdentifier()))
+                        .Select(x => x.Key)
+                        .First();
+
+            myStack.Push((destinationNode, 0, segementIdOfDestinationNode, new List<INode>()));
+
+            int max = 0;
+            while (myStack.Count > 0)
+            {
+                (INode currentNode, int pathId, int segmentId, List<INode> prefixPath) = myStack.Pop();
+                Fill_no_stackoverflow(currentNode, pathId, segmentId, prefixPath);
+                if (paths.ContainsKey(pathId))
+                {
+                    max = Math.Max(max, paths[pathId].Count);
+                    paths.Remove(pathId);
+                }
+            }
+
+            return max - 1;
         }
 
         private void Fill(INode currentNode, int pathId, int segmentId, List<INode> prefixPath)
@@ -171,7 +192,6 @@ namespace AdventOfCode2023.Core.Daily.Day23
                         Fill(otherBranchNodes.node, globalPathId, otherBranchNodes.segment, newPath);
                     }
                     segmentId = nextNodesAndSegment.First().segment;
-                    //currentNode = nextNodesAndSegment.First().node;
                 }
 
                 while (currentNode != null && keyCameFromValuesMultiSegments[segmentId].ContainsKey(currentNode.GetUniqueIdentifier()))
@@ -204,11 +224,9 @@ namespace AdventOfCode2023.Core.Daily.Day23
                     {
                         var newPath = new List<INode>(paths[pathId]);
                         newPath.Add(currentNode);
-                        globalPathId++;
-                        myStack.Push((otherBranchNodes.node, globalPathId, otherBranchNodes.segment, newPath));
+                        myStack.Push((otherBranchNodes.node, paths.Keys.Max() + 1, otherBranchNodes.segment, newPath));
                     }
                     segmentId = nextNodesAndSegment.First().segment;
-                    //currentNode = nextNodesAndSegment.First().node;
                 }
 
                 while (currentNode != null && keyCameFromValuesMultiSegments[segmentId].ContainsKey(currentNode.GetUniqueIdentifier()))
@@ -223,10 +241,6 @@ namespace AdventOfCode2023.Core.Daily.Day23
                 }
 
             }
-
-
-            //Console.WriteLine($"Path {pathId}: {(paths.ContainsKey(pathId) ? paths[pathId].Count : 0)}");
-            //DebugPrintPath(paths[pathId]);
         }
 
         public void DebugPrintPath(List<INode> path)
@@ -277,37 +291,15 @@ namespace AdventOfCode2023.Core.Daily.Day23
             int key = keyCameFromValuesMultiSegments.Keys.Max() + 1;
             foreach (var subSegment in copy)
             {
-                //var path = new List<INode>();
-                //var currentNode = subSegment.Value.Last().Value;
-                //while (currentNode != null)
-                //{
-                //    path.Add(currentNode);
-                //    if (subSegment.Value.ContainsKey(currentNode.GetUniqueIdentifier()))
-                //        currentNode = subSegment.Value[currentNode.GetUniqueIdentifier()];
-                //    else
-                //        break;
-                //}
-
                 var newSegment = new Dictionary<string, INode>();
-                foreach(var kvp in subSegment.Value)
+                foreach (var kvp in subSegment.Value)
                 {
-                    if(kvp.Value == null) continue;
+                    if (kvp.Value == null) continue;
                     newSegment.Add(kvp.Value.GetUniqueIdentifier(), GetNode(kvp.Key));
                 }
 
                 keyCameFromValuesMultiSegments.Add(key, newSegment);
                 key++;
-
-                //var path2 = new List<INode>();
-                //currentNode = newSegment.First().Value;
-                //while (currentNode != null)
-                //{
-                //    path2.Add(currentNode);
-                //    if (newSegment.ContainsKey(currentNode.GetUniqueIdentifier()))
-                //        currentNode = newSegment[currentNode.GetUniqueIdentifier()];
-                //    else
-                //        break;
-                //}
             }
         }
     }

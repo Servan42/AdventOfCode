@@ -79,6 +79,68 @@ namespace AdventOfCode2023.Tests
         }
 
         [Test]
+        public void Should_part1_rethink()
+        {
+            // Given
+            var inputLines = new List<string>
+            {
+                "#.#####################",
+                "#.......#########...###",
+                "#######.#########.#.###",
+                "###.....#.>.>.###.#.###",
+                "###v#####.#v#.###.#.###",
+                "###.>...#.#.#.....#...#",
+                "###v###.#.#.#########.#",
+                "###...#.#.#.......#...#",
+                "#####.#.#.#######.#.###",
+                "#.....#.#.#.......#...#",
+                "#.#####.#.#.#########v#",
+                "#.#...#...#...###...>.#",
+                "#.#.#v#######v###.###v#",
+                "#...#.>.#...>.>.#.###.#",
+                "#####v#.#.###v#.#.###.#",
+                "#.....#...#...#.#.#...#",
+                "#.#########.###.#.#.###",
+                "#...###...#...#...#.###",
+                "###.###.#.###v#####v###",
+                "#...#...#.#.>.>.#.>.###",
+                "#.###.###.#.###.#.#v###",
+                "#.....###...###...#...#",
+                "#####################.#"
+            };
+
+            // When
+            int result = MazeRethink.Parse_with_edge_contraction(inputLines).BuildPathsAndReturnLongest();
+
+            // Then
+            Assert.That(result, Is.EqualTo(94));
+        }
+
+        [Test]
+        [Ignore("Current edge contraction & node graph implementation do not allow multiple unidirectional edge between node A and B")]
+        public void Should_part1_simple_rethink()
+        {
+            // Given
+            var inputLines = new List<string>
+            {
+                "#.#####",
+                "#.#####",
+                "#.....#",
+                "#.###.#",
+                "#.#...#",
+                "#...###",
+                "###.###",
+                "###.###"
+            };
+
+            // When
+            int result = MazeRethink.Parse_with_edge_contraction(inputLines).BuildPathsAndReturnLongest();
+
+            // Then
+            Assert.That(result, Is.EqualTo(13));
+        }
+
+        [Test]
         public void Should_part2()
         {
             // Given

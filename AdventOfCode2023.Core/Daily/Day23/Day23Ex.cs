@@ -17,11 +17,8 @@ namespace AdventOfCode2023.Core.Daily.Day23
 
         public override void ComputePart2()
         {
-            var maze = Maze.Parse(InputLines, true);
-            maze.BFS();
-            //maze.DebugPrintSubSegments();
-            maze.AddReversedSubSegments();
-            Output = maze.BuildPathsAndReturnLongest_no_stackoverflow().ToString();
+            var maze = MazeRethink.Parse_with_edge_contraction(InputLines, true);
+            Output = maze.BuildPathsAndReturnLongest().ToString();
         }
     }
 }
