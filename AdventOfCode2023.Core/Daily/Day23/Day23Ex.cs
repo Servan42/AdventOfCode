@@ -19,7 +19,9 @@ namespace AdventOfCode2023.Core.Daily.Day23
         {
             var maze = Maze.Parse(InputLines, true);
             maze.BFS();
-            Output = maze.BuildPathsAndReturnLongest().ToString();
+            //maze.DebugPrintSubSegments();
+            maze.AddReversedSubSegments();
+            Output = maze.BuildPathsAndReturnLongest_no_stackoverflow().ToString();
         }
     }
 }

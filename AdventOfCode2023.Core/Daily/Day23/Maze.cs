@@ -6,6 +6,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -15,7 +16,7 @@ namespace AdventOfCode2023.Core.Daily.Day23
     {
         public List<string> InputLines { get; private set; }
         Dictionary<int, List<INode>> paths = new();
-        new Dictionary<int, Dictionary<string, INode>> keyCameFromValuesMultiSegments = new();
+        Dictionary<int, Dictionary<string, INode>> keyCameFromValuesMultiSegments = new();
         List<string> intersectionsSeen = new();
 
         public static Maze Parse(List<string> inputLines, bool isPart2 = false)
@@ -124,6 +125,31 @@ namespace AdventOfCode2023.Core.Daily.Day23
             return paths.Select(p => p.Value.Count).Max() - 1;
         }
 
+        Stack<(INode currentNode, int pathId, int segmentId, List<INode> prefixPath)> myStack = new();
+        int globalPathId = 0;
+        public int BuildPathsAndReturnLongest_no_stackoverflow()
+        {
+            INode destinationNode = GetDestinationNode();
+            int segementIdOfDestinationNode = keyCameFromValuesMultiSegments
+                        .Where(x => x.Value.ContainsKey(destinationNode.GetUniqueIdentifier()))
+                        .Select(x => x.Key)
+                        .First();
+
+            myStack.Push((destinationNode, 0, segementIdOfDestinationNode, new List<INode>()));
+
+            while (myStack.Count > 0)
+            {
+                (INode currentNode, int pathId, int segmentId, List<INode> prefixPath) = myStack.Pop();
+                //Console.Clear();
+                //DebugPrintPath(prefixPath);
+                Fill_no_stackoverflow(currentNode, pathId, segmentId, prefixPath);
+                //Console.Clear();
+                //DebugPrintPath(prefixPath);
+            }
+
+            return paths.Select(p => p.Value.Count).Max() - 1;
+        }
+
         private void Fill(INode currentNode, int pathId, int segmentId, List<INode> prefixPath)
         {
             paths.Add(pathId, prefixPath);
@@ -141,7 +167,8 @@ namespace AdventOfCode2023.Core.Daily.Day23
                     {
                         var newPath = new List<INode>(paths[pathId]);
                         newPath.Add(currentNode);
-                        Fill(otherBranchNodes.node, paths.Keys.Max() + 1, otherBranchNodes.segment, newPath);
+                        globalPathId++;
+                        Fill(otherBranchNodes.node, globalPathId, otherBranchNodes.segment, newPath);
                     }
                     segmentId = nextNodesAndSegment.First().segment;
                     //currentNode = nextNodesAndSegment.First().node;
@@ -149,9 +176,138 @@ namespace AdventOfCode2023.Core.Daily.Day23
 
                 while (currentNode != null && keyCameFromValuesMultiSegments[segmentId].ContainsKey(currentNode.GetUniqueIdentifier()))
                 {
+                    if (paths[pathId].Contains(currentNode))
+                    {
+                        paths.Remove(pathId);
+                        return;
+                    }
                     paths[pathId].Add(currentNode);
                     currentNode = keyCameFromValuesMultiSegments[segmentId][currentNode.GetUniqueIdentifier()];
                 }
+            }
+        }
+
+        private void Fill_no_stackoverflow(INode currentNode, int pathId, int segmentId, List<INode> prefixPath)
+        {
+            paths.Add(pathId, prefixPath);
+            while (currentNode != null)
+            {
+                if (intersectionsSeen.Contains(currentNode.GetUniqueIdentifier()))
+                {
+                    var segmentIds = keyCameFromValuesMultiSegments
+                        .Where(x => x.Value.ContainsKey(currentNode.GetUniqueIdentifier()))
+                        .Select(x => x.Key);
+
+                    var nextNodesAndSegment = segmentIds.Select(id => new { node = keyCameFromValuesMultiSegments[id][currentNode.GetUniqueIdentifier()], segment = id });
+
+                    foreach (var otherBranchNodes in nextNodesAndSegment.Skip(1))
+                    {
+                        var newPath = new List<INode>(paths[pathId]);
+                        newPath.Add(currentNode);
+                        globalPathId++;
+                        myStack.Push((otherBranchNodes.node, globalPathId, otherBranchNodes.segment, newPath));
+                    }
+                    segmentId = nextNodesAndSegment.First().segment;
+                    //currentNode = nextNodesAndSegment.First().node;
+                }
+
+                while (currentNode != null && keyCameFromValuesMultiSegments[segmentId].ContainsKey(currentNode.GetUniqueIdentifier()))
+                {
+                    if (paths[pathId].Contains(currentNode))
+                    {
+                        paths.Remove(pathId);
+                        return;
+                    }
+                    paths[pathId].Add(currentNode);
+                    currentNode = keyCameFromValuesMultiSegments[segmentId][currentNode.GetUniqueIdentifier()];
+                }
+
+            }
+
+
+            //Console.WriteLine($"Path {pathId}: {(paths.ContainsKey(pathId) ? paths[pathId].Count : 0)}");
+            //DebugPrintPath(paths[pathId]);
+        }
+
+        public void DebugPrintPath(List<INode> path)
+        {
+            int oCount = 0;
+            for (int row = 0; row < InputLines.Count; row++)
+            {
+                for (int col = 0; col < InputLines[0].Length; col++)
+                {
+                    if (path.Contains(GetNode($"{row},{col}")))
+                    {
+                        Console.Write("O");
+                        oCount++;
+                    }
+                    else
+                        Console.Write(InputLines[row][col].ToString().Replace("#", " "));
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine($"Path lengh: {path.Count}");
+            Console.WriteLine($"Printed lengh: {oCount}");
+        }
+
+        internal void DebugPrintSubSegments()
+        {
+            foreach (var subsegment in keyCameFromValuesMultiSegments)
+            {
+                Console.WriteLine($"Subsegement {subsegment.Key}");
+
+                var path = new List<INode>();
+                var currentNode = subsegment.Value.Last().Value;
+                while (currentNode != null)
+                {
+                    path.Add(currentNode);
+                    if (subsegment.Value.ContainsKey(currentNode.GetUniqueIdentifier()))
+                        currentNode = subsegment.Value[currentNode.GetUniqueIdentifier()];
+                    else
+                        break;
+                }
+
+                DebugPrintPath(path);
+            }
+        }
+
+        internal void AddReversedSubSegments()
+        {
+            var copy = new Dictionary<int, Dictionary<string, INode>>(keyCameFromValuesMultiSegments);
+            int key = keyCameFromValuesMultiSegments.Keys.Max() + 1;
+            foreach (var subSegment in copy)
+            {
+                //var path = new List<INode>();
+                //var currentNode = subSegment.Value.Last().Value;
+                //while (currentNode != null)
+                //{
+                //    path.Add(currentNode);
+                //    if (subSegment.Value.ContainsKey(currentNode.GetUniqueIdentifier()))
+                //        currentNode = subSegment.Value[currentNode.GetUniqueIdentifier()];
+                //    else
+                //        break;
+                //}
+
+                var newSegment = new Dictionary<string, INode>();
+                foreach(var kvp in subSegment.Value)
+                {
+                    if(kvp.Value == null) continue;
+                    newSegment.Add(kvp.Value.GetUniqueIdentifier(), GetNode(kvp.Key));
+                }
+
+                keyCameFromValuesMultiSegments.Add(key, newSegment);
+                key++;
+
+                //var path2 = new List<INode>();
+                //currentNode = newSegment.First().Value;
+                //while (currentNode != null)
+                //{
+                //    path2.Add(currentNode);
+                //    if (newSegment.ContainsKey(currentNode.GetUniqueIdentifier()))
+                //        currentNode = newSegment[currentNode.GetUniqueIdentifier()];
+                //    else
+                //        break;
+                //}
             }
         }
     }

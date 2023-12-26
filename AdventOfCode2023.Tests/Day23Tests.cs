@@ -78,7 +78,7 @@ namespace AdventOfCode2023.Tests
             Assert.That(sut.Output, Is.EqualTo("13"));
         }
 
-        //[Test]
+        [Test]
         public void Should_part2()
         {
             // Given
