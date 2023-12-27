@@ -1,300 +1,1216 @@
-﻿219051609191782, 68260434807407, 317809635461867 @ 146, 364, -22
-292151991892724, 394725036264709, 272229701860796 @ -43, -280, -32
-455400538938496, 167482380286201, 389150487664328 @ -109, 219, -58
-199597051713828, 198498491378597, 230104579246572 @ 134, 104, -62
-367935067813454, 358033491577763, 300052079497308 @ -33, -17, 27
-239730316398484, 322209632306829, 343431553310564 @ 86, -85, -154
-246742202475134, 333490255115089, 398751268615964 @ 99, -36, -165
-204424990569080, 172605788927383, 149785389522746 @ 138, 219, 266
-172082527043795, 158439310305133, 234013400813615 @ 255, 282, -58
-220370120403044, 232965679824757, 190566665876012 @ -28, -169, 95
-202902849718670, 148168493267641, 185097468430810 @ 63, 432, 120
-228725440025693, 410352643262604, 372847496982605 @ 81, -415, -340
-177315462014505, 184539494450866, 171810222769166 @ 221, 183, 197
-217730146223924, 200433850678309, 219376308127724 @ -15, 42, -101
-222884825564324, 236000842140709, 93247678555244 @ 125, 97, 337
-474330588840756, 416809758570341, 271898913958188 @ -89, -26, 87
-192808626109540, 141118641261609, 211134338817756 @ 176, 305, 87
-245270386786099, 328171506634409, 115159052188808 @ 47, -170, 335
-409038200284664, 466696643291710, 287988524391713 @ -68, -131, 50
-328247825963964, 166395466877909, 200610976836724 @ -25, 224, 144
-201969651998112, 254435070279913, 260545233403648 @ 113, -207, -258
-209204179042542, 215778610499274, 201082866718433 @ 46, -55, 26
-239481888334576, 257817515121821, 322817431920858 @ -142, -314, -744
-216183482414330, 301994962667704, 327831467521172 @ 94, -215, -325
-355598752236428, 404889034247101, 361153064013396 @ 9, -39, -20
-138659130909386, 191190734799997, 141890222429789 @ 266, 186, 234
-214517469523460, 231940644760446, 248302055529530 @ 96, 13, -67
-284009939483767, 259055618899510, 423675589177452 @ 91, 123, -77
-310497312596250, 294380095807630, 385168341088949 @ 58, 81, -46
-421801192147517, 260531912798637, 205851318917763 @ -51, 122, 150
-336669166523075, 347495590953430, 316315998356930 @ -9, -21, -7
-340439912405459, 372883800332263, 352816981486097 @ 7, -28, -32
-429115058871389, 315983862655724, 409767826048320 @ -213, -25, -209
-227273118970204, 204894196209555, 265590395373240 @ 92, 137, -39
-331292757629236, 13848626059957, 3136299980372 @ 26, 396, 380
-323908274752619, 165432882311924, 557690600482189 @ -39, 227, -462
-202675243892821, 378669472736804, 105089766651483 @ 113, -815, 546
-254598388171219, 220852153624941, 338719385078681 @ 37, 106, -190
-308292381194126, 353444148493408, 426347165561174 @ 70, 31, -71
-414546344895932, 330527216687125, 301181099435852 @ -81, 24, 31
-355478805196684, 377661452559445, 187848446893732 @ 7, -12, 168
-216642010987244, 302087251125709, 283539649828394 @ 148, 22, 22
-319193450325977, 330302163151930, 63325884930926 @ 5, -9, 341
-227538801631764, 235112062256969, 226599454748984 @ 20, -43, -28
-287017281673994, 465984501605819, 415927989120424 @ 87, -95, -71
-221323771423847, 171415493144578, 115512849253778 @ 83, 223, 377
-363168669296819, 459685720025809, 12385358751374 @ 11, -82, 349
-308347483559579, 281012014588729, 289198047383674 @ -15, 30, -11
-191040226887972, 214734784706917, 104405689278508 @ 184, 132, 325
-248224064743008, 232152300546065, 265650797723408 @ -130, -88, -283
-363772094066054, 372687403247227, 324735015162050 @ -33, -41, -8
-440530309388627, 243522939337762, 390123526365527 @ -177, 111, -130
-223520799720018, 162201973451551, 123246489506604 @ -22, 288, 499
-388229261965374, 549783024592539, 338905953460829 @ -194, -508, -130
-254158445332404, 399140204786669, 125667959354244 @ 62, -223, 280
-217479798368774, 264766770795754, 182581386796829 @ 6, -335, 150
-336003321114872, 374155730636053, 309392919231632 @ 21, -18, 28
-226531882877936, 228406259245267, 212248085681768 @ 6, -39, 17
-198633116187660, 194014366550325, 182852368985216 @ 74, 22, 128
-238253497910369, 195242727506977, 208953293786642 @ 57, 158, 97
-362703720471034, 313897334603599, 454612179241664 @ 13, 69, -103
-212856060349456, 147217692127260, 240424981589131 @ 76, 337, -102
-421439152092196, 358649541894629, 384782704948156 @ -64, 10, -47
-234787800044543, 142049604289050, 154930376384748 @ -75, 397, 307
-264293456976181, 257873793071747, 222254255909900 @ 25, 32, 83
-343244149367539, 351379756851969, 334059062374459 @ 25, 22, 12
-78758476750169, 38379831620038, 152899553762162 @ 357, 419, 217
-232725507034229, 275456674618321, 327756092406062 @ 117, 46, -67
-410792039701824, 471917517946325, 359052987685552 @ -113, -194, -68
-454705992417295, 147284326992898, 218883157476860 @ -121, 243, 131
-272871125557508, 308929281113269, 309320277829804 @ -30, -135, -161
-556834712804606, 281753148446413, 380107844662082 @ -170, 106, -19
-332068341884671, 265783925602770, 507494207903349 @ 49, 121, -146
-442521431186846, 276886963281421, 484026255390362 @ -181, 62, -268
-276847042360670, 244037368756201, 369531213009170 @ 95, 136, -28
-220426636106474, 264599827028149, 274720087988087 @ 102, -30, -82
-476267749591484, 247819858585099, 351382314283412 @ -88, 140, 11
-333964474277300, 353749131693801, 322738448458202 @ -24, -52, -34
-311894060107772, 199873420167013, 238239859189576 @ -54, 162, 60
-334939921727316, 362943873359549, 397690013142148 @ 46, 25, -38
-369806306201540, 266267169075200, 376488357003385 @ -96, 67, -134
-195496995592308, 56482644538105, 281410361153780 @ 164, 603, -163
-262226252828288, 291478847398957, 214575302784620 @ 61, 8, 115
-243647380042204, 120575554687175, 450790807779048 @ 92, 307, -303
-228962781148463, 232906796728015, 297537056981076 @ 21, -24, -309
-359657388282953, 348935963195849, 307903408541639 @ -27, -10, 14
-198172901159909, 214818838713799, 204924988960979 @ 87, -160, -76
-350088656858564, 339908308437799, 340460440033814 @ -176, -161, -188
-158926510323449, 295983610149276, 273339044644811 @ 237, 17, 26
-184481434534875, 214135380047312, 243753342808278 @ 209, -49, -263
-306133706821504, 344342297121729, 335273164494924 @ 77, 47, 27
-201555022563324, 205771370114829, 199271311206964 @ -65, -325, -200
-332226785186987, 140025987292387, 307272296595755 @ -29, 264, -18
-437162995883174, 194209654314709, 457590221815354 @ -129, 186, -180
-461308043162995, 356227406368902, 199848473899940 @ -107, 13, 155
-183967860228856, 146295575829553, 202322295850016 @ 223, 507, -70
-282216418382110, 344215185710189, 309785584010957 @ 34, -70, -40
-354246942903740, 382010932162903, 260179929435794 @ -72, -116, 49
-148669281983284, 196424011881349, 212693243466124 @ 236, 186, 139
-377382214186134, 260268348613119, 363333779208839 @ -82, 88, -88
-231224074436529, 177368496493809, 343957779608939 @ 97, 206, -178
-236196333787332, 239795946498965, 237380408989532 @ 26, -7, -22
-306834389696888, 395322724781941, 384134122596416 @ 59, -34, -50
-230041175759259, 300109974927474, 53787714874994 @ 115, -13, 401
-402720949039436, 249141060446509, 267925058093996 @ -57, 125, 75
-186621283273879, 245923145250479, 133525092436924 @ 193, 32, 291
-504400554696100, 444201275592333, 391524778136000 @ -160, -88, -58
-214057855119549, 282495351527994, 253311386569967 @ 77, -245, -142
-189621374628116, 198110443933201, 138671336741240 @ 164, -33, 600
-204060136942443, 163106015316680, 156942195259919 @ -65, 397, 494
-455633080038074, 373957104860629, 472671738284204 @ -187, -70, -237
-491702022330614, 482126793262627, 293902322678204 @ -123, -107, 59
-180678072033232, 164831255800613, 181418221957545 @ 268, 338, 136
-217098740481839, 226555148583949, 266254233712439 @ 93, 42, -112
-372583213807586, 390562699671450, 443954055188154 @ -66, -89, -191
-344276355389224, 175507140888229, 274309998304924 @ 29, 210, 79
-285158642629049, 229326817824544, 301300462429529 @ 37, 125, -16
-346580079882740, 447582855548125, 372171587996564 @ 36, -56, -11
-231433617949379, 220516103222209, 208035174429779 @ -33, -18, 26
-197246418939884, 162916937644069, 198212183312408 @ 62, 370, -80
-394850717954546, 408326468898399, 299919976011379 @ -174, -200, -36
-240947528229620, 242725051766533, 101234637554252 @ -84, -134, 571
-333225667666322, 394195500297679, 334870861329710 @ -159, -315, -198
-329948825471764, 405934811918029, 188518292496364 @ -22, -135, 163
-272959640524660, 357873488929621, 222375296361264 @ 28, -138, 94
-343259357068268, 288348930745753, 390012935132764 @ 30, 93, -41
-373701949310610, 346244240547537, 270705269098130 @ -7, 28, 80
-261328626598376, 339330766707640, 305062511519470 @ 60, -81, -47
-204187703099524, 211673189560668, 173753721040738 @ 32, -127, 217
-474725433876886, 453824615528465, 252106700687306 @ -145, -116, 92
-243732190345904, 278625889146229, 469142255639774 @ 82, 10, -386
-288308972684119, 430518894827614, 290322006622509 @ -7, -291, -42
-337675090001295, 339017711334578, 309925484092909 @ -19, -19, -6
-295291732064843, 381657567718188, 175384902471696 @ 15, -127, 183
-398623919717705, 346322463071578, 336749529364587 @ -57, 9, -8
-248821318265124, 329245684047765, 39544358516668 @ 112, 11, 358
-398688477963599, 240245190115734, 326947523177649 @ -99, 121, -26
-304305421789596, 236387117745853, 300623609540708 @ -149, 33, -178
-215270208040848, 163437757524917, 444729746640528 @ 89, 254, -794
-216507787357108, 196779271647845, 224968899744164 @ 70, 122, -16
-453768877330922, 430834007262225, 408818159250434 @ -345, -304, -286
-380490869935106, 359209718325841, 324402997213274 @ -6, 22, 29
-354510156553034, 356520055406239, 289744340620814 @ -254, -272, -119
-412518345277244, 325841451870389, 451916907564984 @ -54, 46, -120
-235371258929300, 181551438403891, 407515097406080 @ 136, 203, -87
-498545749037246, 402158384800438, 500553316064522 @ -142, -33, -167
-219557381648436, 203576429601365, 211986899758324 @ -70, -16, -96
-429612395294540, 389758164043101, 231186132207468 @ -99, -47, 115
-191993489477521, 182616584707539, 76166745194791 @ 185, 200, 322
-389806105397870, 74519734873613, 543503931331590 @ -57, 334, -270
-275374251415042, 287519243174663, 292626803470934 @ 65, 49, 14
-309255531958219, 434315875497498, 302599520547640 @ 47, -97, 31
-504510335369036, 458525297876755, 234756123669806 @ -204, -143, 108
-220108634903579, 214501750778539, 204841819762469 @ 7, -8, 28
-246712247314742, 217086004527549, 237824152204800 @ -9, 70, -23
-235521515505679, 230008714491202, 264787376879745 @ -83, -99, -314
-235494642511179, 353376462999282, 267207159809243 @ -83, -799, -328
-109328583422525, 205824524451733, 176568567495778 @ 315, 162, 181
-411029167314797, 398582139488935, 367164353648498 @ -47, -28, -23
-253239103019698, 285003293799327, 362729487145832 @ 91, 43, -103
-281404944134469, 178580240689686, 174758692009467 @ -23, 203, 186
-274855833181220, 259571765194549, 250573425904556 @ -64, -35, -33
-210612224456960, 128469666112531, 160365107366528 @ 38, 517, 293
-220113070465540, 366762124560645, 198333857441964 @ 79, -443, 109
-351532962265820, 417810720334708, 202866847989896 @ 8, -61, 151
-308639698065644, 357941369780689, 252832530355602 @ 72, 30, 105
-351147416235099, 113277553236629, 407303396276199 @ -19, 290, -116
-370659873185212, 370411262283379, 401321851010696 @ -20, -15, -79
-318969767271380, 323872080160005, 278273542733852 @ -9, -16, 26
-462449822956775, 320846295920872, 346547174576090 @ -79, 67, 13
-333301087229264, 362903904622549, 294158014197024 @ -267, -378, -186
-384704303045005, 288872914979040, 363339422141342 @ -19, 89, -19
-301136419714313, 371306150165815, 205637568276380 @ -5, -128, 131
-195864629774174, 372850456005499, 177062422161344 @ 169, -303, 181
-394179625597135, 425562614990951, 464391714687766 @ -35, -64, -135
-304119032704964, 246256358870059, 298349425200662 @ -48, 65, -68
-340363726753334, 385458530026909, 297215915046644 @ 43, 6, 63
-337902815013884, 348130881467329, 323602950522164 @ -44, -60, -49
-246948585944744, 217319959823629, 216160209168374 @ -66, 30, 14
-273188903053972, 345137109884229, 55019694257820 @ 65, -40, 360
-255837668631914, 248840769393379, 160908646771274 @ -113, -115, 254
-220970475306420, 292130363657397, 339295905613174 @ 8, -422, -696
-196013637025817, 161698163152423, 226163213886245 @ 149, 276, -52
-554156774736804, 312266752123197, 235656325420340 @ -208, 61, 116
-350081823517900, 542403266494495, 87437094197786 @ 8, -204, 281
-391427340278916, 486685566615662, 316538890668900 @ -32, -131, 27
-329650873244084, 179397158918413, 288048969332804 @ -28, 204, 9
-363608826159944, 409304930345389, 325820818116254 @ -234, -354, -178
-247048964628829, 297120527655939, 268073572437919 @ 37, -104, -54
-464036361020282, 209481228329848, 292821010844096 @ -126, 171, 47
-239718260293154, 426365716776583, 309233902990538 @ 117, -147, -8
-369301724461196, 314340366359695, 307126856753816 @ -152, -52, -65
-186905114139727, 98277757872822, 229020008049790 @ 193, 901, -279
-246369691114507, 71396470114068, 242049588737042 @ 131, 317, 113
-210384717282820, 227212448653573, 194643947096588 @ -29, -279, 20
-178978006192314, 146233510434339, 225913350639334 @ 298, 596, -455
-430924471198668, 468396176017887, 184829140773066 @ -52, -83, 172
-318530961409914, 243585018943053, 153849812041611 @ 22, 122, 210
-309206214481664, 377261625379249, 316360399119899 @ 20, -74, -16
-315997361414555, 231428748733363, 262616164995482 @ 49, 148, 85
-175941893791073, 79741094011708, 44280501949109 @ 209, 357, 384
-370926726309623, 479008637864715, 183861622876682 @ 9, -92, 173
-231798423376250, 267281664332585, 268500598105348 @ 111, 44, 15
-432590023780100, 386972904617645, 261638500017052 @ -60, -7, 93
-188244314411654, 216748977305269, 112777704605474 @ 182, -126, 709
-244102005185504, 326918642766779, 240897264765724 @ -18, -347, -53
-213340707100973, 234557890851700, 236882541774395 @ 155, 127, 96
-307174290429198, 196661614765904, 191370655092636 @ 50, 185, 163
-345134168669352, 322964838178385, 455869498147182 @ 14, 44, -134
-222293224980292, 253934017655155, 228226572062764 @ 80, -39, 19
-270364806091404, 367483883360629, 121739821788124 @ -19, -276, 321
-265373698520354, 241326869449963, 261113897338016 @ 17, 63, -7
-65940908346583, 145465734684508, 187845593878831 @ 325, 243, 168
-223881595900215, 281119573650347, 341232159480616 @ 155, 104, 15
-215184122140794, 234159185557874, 203503203459644 @ 34, -119, 35
-251089910324554, 195714789290864, 187689181275624 @ 62, 169, 159
-194686944314384, 263306831965873, 177561083616440 @ 107, -763, 182
-314373390830012, 397488351101785, 202826995105748 @ -22, -163, 137
-204420926919249, 228668596949341, 277509521925509 @ 137, 42, -136
-380506094073392, 395143547410237, 210951567397576 @ -30, -42, 141
-153900625719004, 8601225339829, 214590832735274 @ 292, 714, 68
-310091562260222, 245914730072642, 240477914471071 @ -30, 83, 66
-442104131722604, 389082553119604, 511731379947299 @ -232, -145, -376
-199186151575842, 129182094118123, 130075065891190 @ 73, 663, 646
-347225309884052, 479558625679933, 244154636935460 @ 6, -143, 102
-200369603421894, 192133436702763, 195405700340276 @ 37, 17, -25
-369076279873724, 511305591750157, 17012654199338 @ 12, -122, 338
-289997519998603, 243494360317673, 176831979760491 @ 89, 142, 180
-334214425782345, 228728403802222, 200846391989948 @ -115, 99, 131
-369988106970290, 223531085288829, 338231766108928 @ -189, 110, -155
-429734633425235, 293560523486104, 488548294808531 @ -65, 85, -150
-394331312507444, 322601667658765, 231141217620380 @ -18, 61, 125
-263477684232732, 153339932591665, 223130000069120 @ -46, 279, 38
-280737863011820, 212522991793837, 257639016458476 @ -165, 69, -125
-192802749217661, 133735978877437, 289456755157331 @ 151, 506, -612
-171510516153364, 191207333072002, 256914241329188 @ 272, 129, -229
-239292793729335, 215842596137022, 205353095211725 @ -167, -67, -10
-212598129907048, 186287199881485, 178345127953460 @ -107, 84, 173
-257930116551823, 349048582009776, 310749569097037 @ -7, -277, -194
-228060455502404, 289061036420469, 155394636549132 @ 42, -205, 261
-291736002298964, 174993811851489, 204011572684664 @ -12, 211, 128
-253624738271752, 296452990974403, 415341395965657 @ 116, 72, -92
-279410568059684, 237102933725349, 84475668292164 @ 96, 146, 276
-33222779249690, 15490158692989, 46262273117060 @ 365, 390, 327
-281195399343594, 256173091089530, 294121791085896 @ -38, 13, -105
-211415801546044, 98824812270389, 271941922387364 @ 157, 320, 44
-335069930327354, 334193836996129, 281714319675374 @ 11, 16, 52
-437687495812022, 434028739189563, 364572989716226 @ -255, -251, -154
-336857997169968, 361454552836353, 469390112486866 @ -140, -202, -467
-351341441224811, 359586568736674, 317911746661448 @ 9, 5, 23
-304551348333750, 208934375341643, 309384133853392 @ -26, 148, -65
-306147021321170, 257832849131799, 309068656128615 @ -54, 40, -92
-288837318348179, 384125908132072, 234398702668799 @ -33, -251, 54
-290290016424936, 249342608439643, 256010522159480 @ -22, 57, 17
-213017452237478, 302222579230677, 179774363389287 @ 18, -638, 166
-383114520086624, 426854514436984, 301560065477339 @ -60, -113, 20
-364736654336654, 317682961314349, 399784044809478 @ -33, 30, -102
-285575229612599, 220117762833172, 202730743594148 @ -93, 81, 107
-337367694363443, 231802880047471, 343972875671126 @ -27, 128, -63
-187016878804004, 336461147471259, 314219134231281 @ 192, 20, 18
-356683662015586, 174526408037295, 202350113084274 @ -154, 212, 129
-250271233383684, 459756396780666, 222505179732823 @ 32, -509, 66
-242279433306276, 390944755705680, 380317245416905 @ 64, -289, -290
-215490966924364, 213730509180234, 207543883762604 @ 8, -37, -13
-198140604120026, 252361970344381, 164225912911988 @ 71, -626, 327
-547576956456439, 510363925876332, 534107987352637 @ -313, -259, -320
-348106292236119, 268873249897863, 223199830695887 @ -53, 68, 110
-407382462342500, 258144234715165, 303665548320122 @ -160, 78, -22
-182819911189229, 242658622724629, 185364810606674 @ 231, -414, 109
-421095130034724, 346493988466919, 458542819654014 @ -64, 23, -128
-233652328042196, 288209476547193, 389634457101046 @ 144, 94, -39
-343954820727599, 160237503295663, 446747076080003 @ 7, 228, -138
-476878576717220, 419254477769797, 366406589601056 @ -160, -86, -50
-167453303951944, 283106802574559, 252173376248752 @ 212, 100, 103
-265232184757156, 247983823850253, 244569851781820 @ -176, -131, -135
-203906069832176, 192396331916401, 188542010511716 @ 28, 46, 75
-315924254503160, 315656438886730, 218302712088566 @ 20, 23, 125
-299909624409644, 292741915171009, 338486852865104 @ 10, 21, -80
-271920880262874, 254317553725649, 236330242576844 @ -17, 16, 35
-227269517019508, 97621858660597, 321931472996604 @ 23, 537, -426
-151279124776878, 206682628443807, 218131812309598 @ 239, 169, 126
-208678911129753, 156563158245939, 191586770512065 @ -71, 440, 12
-282692875870864, 330638936132352, 324762787306459 @ 52, -17, -36
-288990615056444, 325026913675549, 244146000662204 @ 29, -29, 73
-396460210219930, 343829399382180, 296260481826212 @ -190, -97, -37
-259802578313324, 388607494451627, 212607181576488 @ 12, -317, 93
-247191348950273, 378913800537589, 171899097571151 @ 121, -30, 186
-418241568969308, 388984321939968, 320318936408403 @ -264, -211, -102
-378613557802976, 343832968186921, 265485333215312 @ -55, -7, 66
-241869656048552, 231132492460165, 228306647866940 @ -21, -6, -17
-210766682614070, 195090312450915, 153665324776120 @ 135, 163, 237
-296768361751059, 291830568921934, 305984721000599 @ 25, 33, -16
-393692091127076, 366035852248561, 249683721095117 @ -64, -26, 90
-262034555718005, 242812720175557, 175962192386276 @ -129, -78, 187
-286953489290724, 277384268083429, 287470985840044 @ -220, -210, -273
-120509136116246, 159755307093760, 128826086672576 @ 306, 237, 263
-244459427182480, 206762645152988, 255548180793568 @ 124, 173, 87
-247904518343169, 354588433650479, 202903172797639 @ 107, -40, 144
-284596102506416, 74467661026157, 422817927914852 @ 51, 356, -175
-346028219022056, 71761937209378, 361082665598801 @ 28, 317, -10
+﻿vxg: jlc
+xgz: jgn nzg
+fjx: jpz qgl ltq hhl
+gqv: dgv
+pcj: tnb nsj
+gxg: xtg
+vxn: frn ppq gct plq
+msh: vmm hnd dkp xsb
+zhj: dxt ppt
+bcz: bxg
+svt: xxl bpv zmd stt
+plf: chm fdc vsz xxl
+mhr: rvn kqd mzs
+pcl: vlk znh
+qlm: psc
+hqf: mvq fsn mft mcb
+hcp: sjh nzg
+qrc: vvk txc xlb djf
+cft: dkr pzm vdq nxl
+fzx: qvt cvg jxg
+qmq: sct jsk vbq bkb
+mff: tzc hlk ttv llt
+cbb: cch ffk
+qvv: rvn qcg mhd
+njp: lmx
+cgt: rlc fsf
+mgf: tnb ntt rdc
+ztx: drq gcc
+stv: mqm
+qpq: hcq kzh ppm nxx
+ldv: fbs xjs xkr npx
+szh: ptn gfj nzx pkj
+fkb: dhr znh
+sct: fts
+bng: vmh xht zmv
+ftj: skr gjj vpg
+qbb: bxr blq
+nrn: lxn fjd hnn
+mfn: vlk cnl nhf
+dgh: rmh gxg cnd
+gnl: nxl hdc hlx
+szg: shp
+dhr: xds
+hsc: fvl hhl
+gkc: nqc
+pxb: zcv mnp
+lxn: xtg
+vcb: cbl vqk
+gcc: cxg
+snb: mkj llt
+mtj: dkl scz hdm qbp zbd
+bqp: tmn lcj mll
+hls: ttv fdh plg
+lvv: bcp vmg stt gzr zpk
+ptj: nrn dch hfq sxq
+drh: npd
+vmh: nzm
+fxm: nsr mjs hrz rkh zpj
+qtp: pmx
+mrg: czh ddt qcf hnv
+qrv: hfk gnt dhd gbp dhh
+gqd: qfr
+sgf: zth
+vgl: hfk
+lnz: trd
+dfb: fjv gzz gqv
+hnc: bnc drm qgd nhl
+fjz: xnc xqx ttt kzv
+tgc: qsj lst zgq tbx
+kqd: dgv
+dvt: jtv gqd pln zbx
+bnc: hsk
+hmx: mtp jsn
+vpp: ntt dkf pqf nlf
+clj: lph
+xkq: ksv qxn jjf
+zgh: hkp mhc msm
+pxt: cbl jds nxs
+rzz: qtc tsn fht rql jqq vsm
+zgs: mlm rml btm rpt
+sjh: tmn vtl stt
+trd: kbn
+ggm: hqs qbb bns jlf
+zbc: hdc dfs svg
+jsk: jgb
+mhc: xzp zrh
+bvb: gcb
+cqd: npd xcr ndh ztf
+zzd: dvh kzl
+sqx: fmb xxm vst xcr
+jhb: sjj bfp xqg
+xvj: dkq
+jvq: djs xgj kqh ksv
+sxv: psr pmx zzd cft
+zrv: blp
+lxl: hlh ppq nsh tkb
+rss: nvm
+ljg: pdb ztk ndq
+vgf: gxg rkx qlm
+lvc: jxg mtp dch
+jzr: kjk qvz
+mqc: zgq ppt
+mdx: ltr
+tvh: cnd rss fqh stn
+vrn: kcd
+crd: rml qlm qcg srt jch mvx fjv
+qdk: vsl ckp
+nlt: sjh jhk vvz ngx hfp
+vnv: qhh skx
+rbg: dfs nnr rhc xlz mqc
+zcn: kbn
+rmm: sss qzz xst
+bjf: gbm jms nsd srv
+sfz: mbk bfp tql
+jhg: hrh
+txm: scz lnf bpg psd bnc
+bpg: gmd
+rhc: drh qpl zgq
+spq: qhj rjt tgp
+dlc: gvl ldr
+vbs: gbj skm mxx vlf
+lcx: pkj
+qgd: bkm rbm
+nhf: gdq xds fbr
+tbs: kzh dlb cll
+rdf: dqx dxj zdg gbh psd
+hms: gkx fmp
+pts: chq ggq sdj mzl
+gbm: ftv
+bmv: khb gpg crk tkm
+shh: qcg
+fdc: gjz
+shn: chp mcc sjf rxc
+bfz: qfl
+jbg: nvq
+lff: bdk vps glz gfj
+bxm: jgq
+tqs: gbf hlt fbc
+qfl: nvl
+hfv: nvd jbg xth drg
+zbx: bpp hcf
+crk: lnt lzs
+jcc: jqs xdd mvt
+drn: fkh
+svg: gbt
+rmt: tnq qxc
+rqs: jms blh
+rth: rht
+zbp: pxc bvm nfv dcm
+kbt: lcx
+dlb: fsf tpm
+dbf: prf nhd xbt
+rxv: lph lcj shp xjf
+jcs: cmr nsv hch
+cnn: dbk
+vdq: zth hfh jqh
+ghk: rdm txk
+jrj: zpk lnr gsx bnl
+rbf: qmz sdb ktq
+jcb: cjc fpr
+cdj: nzm jld cxq bng
+xvd: ztf crx cst
+vzc: bmc jsz skk xkq
+jvt: mrc xsr zpl rtf
+zpp: fqh zhh btm
+lcs: tmv qdh css psc
+sqt: sqj ltr dmz
+hlh: fhb
+cgx: sct pmz
+hrg: fpq nsh qhb drg
+vdb: tnq lhv hxf rfs
+txf: rqs trh vkb
+sfc: cxg vmm qdk
+tcb: jgb
+fdh: mrt zld sxg htz
+vkv: bcz dxj
+vhm: rnh
+dbp: grm nxs
+nsr: jms rth jhg
+jsd: vgp cbb
+ccz: ljt cqv hsc qnq
+nrl: dbf bdp qvv
+rxk: lsv bvf
+jqs: nzc fts
+chq: sxc sxq qtq
+lxq: rjt hfc kbj vqp
+dkl: hqs
+vmg: bdk
+tpf: vzt
+mhd: xhn
+nsd: mxl zsr bbd
+zpt: lgp xbs svf
+fxh: skh kjp znz pjk
+rnd: llt zth npn
+rfp: jhc hfq djs
+rdn: shp
+ttv: xjv
+snr: llt cst
+lsm: gjj dxr jsk
+rct: stv jqv jts xqx csh
+zvx: qpl vkv pcl rjr
+npq: jsd vct prv nck psf dkm
+nbf: fgs mrx
+xkr: xth prk hph
+zqf: xtz xqx xdp rxv
+rtg: jgk xxm
+fjp: vrn xgh
+sqv: gck bxr rmg lpx
+tmz: vcz xxm
+npv: gzk ddt qfz gcb
+xmq: rxj hvk lzs
+qgk: xqg cbq qsx lcj
+lsv: tqg pfm tsr vtl
+dqb: kcd ljk zqc qsh
+tzh: bdp nnb sjv tcl
+rjm: rvv hqt bsl szf
+rlz: mxk cnn
+lgp: pxs qpm
+hgl: szj dnq rvt rcm
+ftx: hkl zgr gvn
+lnf: vqg fqb
+trl: sjl rkf
+vhk: tqm
+pvx: npd cbk dnx qkd
+ngb: xcr jfc
+gkm: pgg zgx bmx brb
+jgt: nsj mrt lst tzc
+rdg: xsr xhn vbv
+svk: rxc
+qxk: bfz blv glt
+dsx: chp bcz qsj nbf
+npx: lpx ndq kbj
+php: jds psk pvt gdx bzr
+xxt: gct npd kzl vkz
+dpv: ddh qbv txr lqc
+mjv: xht kcp lst
+kpt: gjm kqh ckh
+gjz: cgz vtl ftb
+nhd: sbb
+msx: ngq bvm sct
+smh: jbg dmz qgj ztf
+bzn: mth hqr vnv gjl
+hcj: lzs fqb dmz
+xmn: mxv nvd msm
+xfx: lqv mll hzz rzd
+lsl: gpl kjk ktr tds zkf
+mxq: rth kjj
+zsv: vct ncs hdg xgj
+kzv: ckq
+vlf: nxz ljd gxf
+kzx: dgp hkj dfs zrd
+nfv: tsf xlf vxc
+zbr: sfz bls kth rdg vqk
+pcq: cbq plv
+xkx: hfh lqg ghk
+hrb: ntt qkd
+qsh: csb ztl trh
+dpl: cbm nrq mnp hsc
+vpc: zjp vqc xth
+svf: lmx rbt
+hfp: jzz
+rvt: tsf qfl rnh
+jsx: qdd gxl tcb
+vgp: gqv gfj
+jnq: xtg
+cmt: bmh xsb
+xtj: fbl jqp
+xjf: zxm
+lhv: jqs css
+dnp: qfr btm pbg cgx
+mhk: ttv zpj pml lnt qbc
+hdp: dtl
+fhb: cfr nft
+cds: vcb jbv qxk
+bzl: kcp bzd jhg fgs dgm hnx vrn
+lsh: gkd jgq
+tlk: qdh bdk fkh nkq
+xzh: szf
+blv: rzd gxl ltq tmn
+mmb: cjb mrt xgh
+xjv: ktl pdx
+pfm: ltq
+njs: phv jlc qtz
+pct: mhz
+rgn: xvj qrv ftn dkr
+mjt: xdm bpg pdx ddt
+znz: nkn rlc
+rnh: vxc
+vll: bfp
+mfk: hfd bfp tjl
+pvm: bbt
+bjs: lkq ftq rkf szg
+hbf: xqb fkk hlc mlm
+lqc: jgb
+sfg: pxc qxl
+vlh: gjf brv hmx hsf
+rml: hmv
+glz: vtl
+ggq: kbn
+nhp: bns fll
+sqc: fhb rjr vmr hmh gct
+lpr: djv nkn bxs xgj mqm
+nhl: tsg mdm pct hfb
+qpk: fps mxl zgr qkk gbt
+bmd: vxs tcb mmk
+chk: jsz ckh dcm
+ftn: zrs
+xcv: vxm
+hsk: bcz
+cvd: drg mjv pjf sxp hrb
+gns: qkk spk xzh
+ddq: qxl jrs zbq mll
+jqq: fkk
+xsx: cqr fps
+qgj: bkm dhd
+dgj: hzd gpl
+prv: sfg pcq jhc
+ddh: drf nkq
+lzs: qpm
+nrz: shh
+sqk: qlz bms drh bmh qqn
+lmt: bcx fkg ccp
+vbv: ncl txc
+gbj: fqt glp
+vfr: pdj ccp zgf lgp
+mvp: shh vbb bjs xvh
+gck: frq
+rln: fpj ltr qcf cjb
+zlx: jcz mbk chr srl
+mlk: pvm hqz
+vtx: qkg
+rjt: hvk
+fcd: ckt qjc xbp
+zmv: vth qhj htf
+mvq: vjn
+zpf: jtt gzl njt dgp
+lms: mkp
+hdj: nkx mkn
+tkd: qgh njp ftn
+bdm: hcr fkk dbk vxs
+tpm: grm sbp
+jcd: lqx
+pzl: sdg jcz jtj
+pmv: zrh
+fkh: cbl
+kvq: qdd jsz djs
+hqd: hcq nbh trl zdn
+qdh: rxk qxc
+gzk: qfx sqj
+nxx: lqv dnp hcf
+ccp: bgm
+hnh: jrk stf pxs nvq
+dms: sqt nzs cjb
+tpv: jjn zjl qjs mvq
+rcv: zjl mlb lbn gkx
+zfr: fhf bpl fqb
+nlf: sqj
+zhh: vtx
+bsl: jjd jmc xxt
+grh: zhj hkj fll pct
+xtz: xqg
+lkq: vll sss hzd
+cvl: klk srl mzq vps krj
+hmf: tcb vbb
+drg: sgf
+ksv: qvl gtv
+hdg: cvg
+vcm: qnz nch
+lst: nhf hbt
+ccc: kzh vjc pxt nkp
+lqg: qqk xxt
+ntf: gvt
+srl: cqm
+pls: ljt rct lff lxn glx nbh
+nks: vpg vcb qjs rpz
+nft: jmc rqf
+mlb: rpt rfs dgv
+dhg: ngb xth bvx bxr
+ghh: frt lhz vrn dqx
+dvh: vgv lvb gnl nft
+qkk: qvd fkb
+vkz: rfh
+qxl: pkj
+qbx: vkz mdz xhq kcp
+dkf: ftv bkr vkb
+hxf: zpk rtf
+djf: sbb hxf hbx
+tsr: kbn
+xpb: xgj zqf xfh gbk
+kgp: fpq
+tmt: nhd
+lpx: fkg
+tgv: lpk
+zdp: cls fkg xfb
+bkq: gzz llr xfh cgx
+prp: mvt pkz pjk tjl pzl vqk
+hrh: tpf
+mtf: nnt jnm hls zlq
+jtt: mkk
+xgc: trb ptd tsf nbh
+mnp: sbp
+qbp: ltr
+kbj: jlc sjf tlh pfg dkp
+rqk: prf mvm
+svb: zgx zcn cgb
+pdx: bft vsl dmz
+gfq: pxs vnr dhr
+jgn: cgb pjk
+fsn: cqm dcm
+lvb: fbr
+mkj: txn rdm
+qhh: sjf vlk mrx
+xtb: chm tpv kmf dxr
+kxs: mfn pjn prk ztx vgl
+bgm: frk xds
+cgz: nvm
+lbf: lbc xhq cnl
+rkh: fmb
+rlx: hss zcm plv lnr sjl
+txr: prf kqd rlc
+jhh: xxt ktl xkx
+ptd: fgm cmc cgz nkp vmg
+jhr: ncl mtp csv
+tnz: xbt rzf lfs tbs
+vgj: hms nbl mcb jvt szj
+pvn: nnb
+zdx: vbd bjl kgp
+vxm: jqk
+cmf: zfb rrp gtn kjv
+zlq: vzt sxd
+khz: drm rln fqp psr
+dbk: vgp kmt
+mkp: skx mzn pkl sxd
+jfv: rqk
+vcz: pkl mdz
+xth: tqm
+xll: njp
+vxq: mqz jlc fbr jmc
+vfz: ttk qbv jsn
+jzl: lnz
+css: rzd
+rdc: tbx qlz
+gtn: jsk psc vcm
+bzh: xfb
+jfc: sgg gbt
+dkm: sjv nrv skm
+zmd: jrs bpv
+rlv: ztx lpk bcx
+vqq: xsr shp pxc
+mcc: hnv qpm
+qjc: pxc qmz cnn
+clr: drn mhd vhm
+rtz: vlk hph xmn
+nxs: drn rdn jbp
+tzk: vst qbb hch
+vtc: cnn kjk rvn cps mft
+cll: gxl
+qqn: xzp cmr
+cpq: vct nrz vbq hlx ffk tmd
+tgb: zcm rql dgh nhd clq
+sdb: rzf mxk brb
+scd: mvm qcj bdk vmg jqq cgt
+ktb: qkd hqr
+hbp: rzx cbm gtv tqg
+mrc: vbq tmn tpm gsx
+gzc: fpq tkm
+phb: dlb mzs kpt mls
+pvf: vpb tmd bnl dlc
+dhd: frk
+sjk: xqm
+jkq: dxt tvz pnv mrn cbk krm
+dzg: fkg zck qgg tgd
+rhn: dnx ztk czh mdz
+vvz: rmm gtl qzz jmp
+xdm: plq ghk gzl
+tst: pld xcv rqf nsd
+glp: psk kbt
+stn: qcj
+kmc: sjv hsf xst ghg
+kkg: xvj ktl kgp mxq dms
+tvz: nsh svg
+ldr: sxh
+zxd: jzr qcj ftj gfj
+gpl: nsp
+bbp: fgm rbq cgx kzv
+lqh: ksz vnv zgh
+pjk: pvm
+lqp: fcl xtz pbg lqv
+qcr: nvm jch nkq rzx svt
+htz: zhm tkm bms thx
+rll: mxq mxv ncn jhg stm
+tsf: cqm
+hfd: pvm hlc jsz xsz
+dtl: mhd xfm hcq rml
+ljd: jnq psc
+qvl: vps mfc rkf
+pln: psc
+vqd: skh mvm
+glf: jqp
+dkq: gcc
+xhq: jjd
+tkl: lcx gcg zds gpl vbb
+qxc: gzr
+ldx: hdg ltb cqv
+qxg: rpt qpg sjk
+ptt: ckp ztv rtz xsx bnc gck
+knd: fkk lpb xdp dlc gjf
+mdm: njs qnr nmz
+vqc: rvv
+lhb: vct ktt gxf fsn
+rtx: vcz fll pkr mxl
+qmz: mlb
+rmg: hbt
+hlc: rvn rfs
+zfl: lnt rtg
+zbq: ckq sct
+pfc: brc vsm dxr djv
+dmg: ggf ppt
+bbd: hqs dhr bxr
+bcp: mfs nch
+qlx: rvn
+vhr: ckt kqj jsv xgj
+hkp: dxt cst qtz
+zkf: jqp xjf jhb
+ptz: gcz xcv ggm bzh
+kxl: jqp stv zxm
+rkx: gjj
+jll: mrt njt qtp
+jmp: jhc
+kfn: cxc zqc
+srt: drf rzx
+trb: qkj vmg mkn
+nxz: qvt
+qmj: vbd bxr chh
+rzf: ntf nkx
+vjc: bnl
+kqj: dgv rmh jfv bvf
+qkc: pfg dsr qtp gnt
+lsp: qgg kfn rxc zkd
+fmv: vgf clr lsh sxh
+kcx: sqj gbh pmv gzl
+fcl: pfm
+mzs: hdn vcv
+zlt: mjv lpx dvh
+fts: grm
+hfb: llt hqr
+shq: qqj hmf bxs xdd
+fbs: zbd krm
+bjm: mnp
+szj: lgz bvf
+qgh: hzf
+cmd: xht bms tpf txn
+tbp: gzr gmt ffk nxx
+hdm: xll fbc jmc
+sqn: vbq nzc lxn bfp rxk
+jgq: nfb
+zkg: fxm hqt xvd frq tmz
+nln: gdx
+xvv: ztd rlv zck ptt
+fpr: nqc bxg
+cvf: tkd sgg hdc nvq
+xlc: jtj zpk gtl
+mkk: frk
+rxc: stm
+fnm: tbx jlc xjs tlh
+czj: dfd bvx lqg cjc
+fhk: tmz hsk fgs cht
+cps: gvl bbt
+jls: bmc
+prt: bgm kgp
+mpm: pcq xbf sjj
+tvf: vmh ngb kfn hsz smh qnh
+plm: fzx trq ttt qnz
+mzn: tzc
+ztv: svk zfr jtt
+rbm: czh
+fbl: ftb jtv
+chj: qfx xpl vxm kfz
+ngh: pmx qkc gpz stf
+vqp: ntt cfr
+qvz: fmp
+vsl: msm tkb vnr
+cht: hqt hxs
+cgb: sjj
+knr: szf qbp qgj zfl rkh xxm
+fgq: kmt bqp xvh ppm
+sjn: xzp xhq hnz frn
+qhg: mxk jjj jhb
+ckr: sxh gkd
+nnt: svk spk vqg
+rxm: rht
+jqv: rgq qlx qnq
+cbp: gcb hqr
+dgp: sgf
+xfh: jls
+chr: zdk pfg
+rbq: jhr zcm cqm
+zdk: hrh cbp
+xsz: mhd bvm
+ffg: ccr xfx krk fts
+zpk: nnx
+mqz: gpg chp
+mdz: cfr ggf
+hlt: qsl tkb
+qct: tlh jlf zrs
+sdj: hdp vqd vjc
+nzs: jld prt gvn
+gkx: cbl xnc
+zbt: vst qpk gzk cqr
+ftq: nvl gqd jrs
+cnd: rzd
+fps: dtm
+plg: hlt xsx mfn
+rbt: mrn
+tsj: xfm ngx xtz bjm
+ftb: bbt
+gjm: nnb vjc
+jnx: nnb vvk
+skx: qpl
+gjl: hfk
+ncn: mrn jgk dtm
+dbl: bxg vqg lst
+ppq: vmm
+dxr: bxs
+pcf: rcm nfb ptj
+hzd: cps gxf
+xvh: lph mlm
+flv: xsz jbv vcv qtk
+srv: hqs jcd qpl
+ztd: svg hph
+nvs: nft fqp ktl mdx
+cmc: sjk
+jgk: mxv
+ppm: dbk
+ptn: pxc vcv
+cqk: jrk rqs gjl hlk
+rjr: mhz
+prk: bpl zgr
+rjf: vcz vkb lms lrz
+xlz: zhj xll
+dds: cqr ztd gbg fkb
+gzz: rzf rpz gxg
+zdn: hkb qsx qgl tqg cll
+ksj: jfc mzd vxm
+ttk: qtc nkn
+vjn: pvm lnz
+xld: clq qxg qnq vvk
+xbs: svk lrs gpg
+bmc: qtk
+sdc: tjl jts mhr vmv
+mjs: qgg hnh vxn
+sxc: zpk bxm zcn
+mft: gvt sjj ckh
+zcx: tgv dmg frn ltr mhz
+csh: qpg
+bbt: xqg
+zmf: hvk qsj chh bbq
+jlv: qpl
+skm: qsx
+lcp: vkv rth
+ttt: pzl
+gjf: gjj
+jcx: lvb qkr jhh dkr
+rgs: bxv dfd vdf xgh sxg
+crx: xzp xjv
+qkd: gbg
+nmz: gcc zsr xzh lqg
+fmd: nnx xqm nln cpq
+mfr: jcd
+vpb: ckt
+fhf: lmx
+mvl: cjc vgl qvd zdx vmh
+pgg: sjv gvt
+djs: hzd
+vkb: rxm mqs
+rsh: hlk xvj zbz zlt nxl
+hdh: rbm zdp dzt
+jfg: lrz kdz ltr
+khb: pmv frt ndq ccq
+zhm: sxg rmg bft
+xzf: ldr tnq
+ntx: gmt nzc bdp rmt
+nck: zsd rxk xdp
+hdq: lcf kmf nks rzx
+spk: rmg
+tfj: ntf mzs hcp vmv
+pkr: pjf
+xpk: msm pct chr vhk
+zsd: zpk qtc qmz
+njt: rqf
+lht: nvm nch lqc
+tmh: jjs bqt scd kqh gmt
+sxp: hlh jqk sbj
+ztl: vhk xmk lrs
+svz: qvz
+thx: gfq cjb hnv
+qqj: mfk vbx dgj
+fkk: tcl
+sbk: jbt brc psk kvq hmv
+tzr: psd rth xjv jqh
+ncl: xfm
+vqk: qvt
+ztf: psb vqp
+pkz: kqd hfp gtv
+xst: vtx zgx
+nqf: mtp cps
+nrv: ncl jhc
+tsn: mft rkx lpb
+bkb: bxb
+czs: mzd mxl mlq mkk mqs
+tzb: rbt chr txm ftx
+bxs: tsr
+vlb: zxm gtv nxq ldf
+vmr: nxl xhq svk
+xxl: sjl
+mhq: rtz nvs stf ljk
+mkn: zgx djs nzx
+kmp: trz bzh vrn lbf
+cls: rlv zbc
+cxg: zrh gcb
+kpd: rvv bpl lms
+vxs: bxs nfb
+bvc: jbt lgz dxz jts
+qfz: xmk krm lmt
+jzj: pxb ttk dbp qkg
+ptp: sgc mpm prl mfk hcf shh
+qfx: qnr
+xgj: jnx vlb nln
+mxv: rxm
+gxf: hnn
+jjf: sbb
+nsm: nvd bxv
+ktr: rnh cvg lnd
+nrq: mlk dmd ljd
+lgr: hbp gqd rpz dvt
+bxd: fkh csh hqp fzr
+gms: qfz zgf nmz ppt
+chp: gbh qkd jlv
+nbh: sdg
+kcd: hvt
+ksn: cht ztf mdx htf zrs
+cvk: qsj txn xmq mcc jll
+zjl: hdn
+kdz: rdm
+jhc: mlb tmd
+pdb: dbt ftv
+tmv: mlm nqf qlm
+sxq: cch
+zpj: zgq ctn
+cmz: zjt rxj vfk pkl xlz
+prl: dmd jhc
+lpn: fcq bvb rtg
+gnn: skx dqx zxj stm pjn
+ncr: hfp mfs rtf glf
+zzh: dbl zrd khb gkc
+xbt: nsp sxq
+lbm: kbc xlc cmc xdd
+zsg: hcf trq sjk
+dck: psf bjs kbv
+jsv: kpt ntf jcc
+lgn: hss mfs bzr gcg
+frn: dqx
+cgc: qqk mxv tnb
+btm: sxh
+csb: zck jrk
+sms: mqz fpj npx kjj
+vjf: stt vrp ddh trd
+sgc: rmh cqv
+xbf: jpz xzf rkf
+gpg: lgp hvk
+spj: bdp xjd xdp
+trr: bjl sdz gbm gfq tzk lnf
+gbh: qlz xfb xds
+fkm: glp lfs plf zpz vll pql
+bqt: scb hzd
+ldg: dgj fjd bjm dlz
+dqv: jtm hts hdg
+tsg: qlv npd jld zbc
+mdc: bmx hmf sbb
+lxv: lbc hrz zqc hlh cls gkc
+jzz: cll mqm gtn ttk
+ncs: clj jkf
+nsg: fmb snr mlq
+lln: zpk qfl gfj
+drm: vpc ktb
+lcf: csv hcr rlz
+dhs: nzx xqb hkh
+jgx: dcm qcj mvv jhr sjl fcd
+bcf: mbk tlv clj
+zrd: jjd
+nbl: jqq tgb nhc
+qgg: qpm
+qgl: jtv lgz
+fzg: krk ttt
+jsb: dbl vxg pmv bpg
+qqp: gkz jjn cjz glz
+mmk: fqh zmd jbt
+bft: bpl
+vqg: jld
+zkd: tgv frt hsk
+fjd: fht hbx bmx
+gnh: lqv dfb pfm mdc
+txc: djv
+vjp: lgz tql hqz
+hqp: pxb jmp spk qlx xfs
+qtj: pxc jsx nxq hcp jpz pln
+stf: ccp
+bvx: vxm
+lfs: tsr
+htf: sxg zrh lrs
+vct: stn
+qzd: vfz ngq fkv
+qjm: sbp ftb mvm hkh nrz
+dfh: mlm qjc cqm drf qnc
+vps: gvt
+gct: hfb
+jpz: glf
+xnc: tqg nnx
+xqx: cbb
+ppt: pkl
+zjp: stm
+chm: srt lss bcp hss
+bmh: cjb
+gcg: vcv
+zgf: xcr xht
+qbv: nch ngx
+nxq: vxc kbt
+pfr: lvc gzr scb jnq tnq
+lnd: jds sbp qcg jbv
+blh: znh
+mvx: fbl
+sdg: jbp
+tln: fgm vhm hdp zsg
+lpz: zzd rjr dns rfh
+zxj: rvm chh
+tql: jjn
+bjl: rfh
+gnq: rkh nvd vfr vqc czk
+ttj: nxz nln vbv ltq
+kjp: sxq xfx
+mnm: lff qhg nrz fjv
+qhb: lpx vqg drq
+tlv: xlf pjk
+rvm: qgh nlf mfr dtm
+jtj: hdn nhc jjj sbb zhh
+mdq: bjm mxx jjf nzc pvn
+tgd: hxs tlh mmb
+jsn: csv
+rrp: cjz vgf bmc
+pdh: vxg lmx tnb
+xrg: rvv dkq cjb
+hrz: xjl
+krk: qvz
+dzt: szf zgh rtx
+psf: scb lln
+tjm: djf nbh lbn bpp gtl
+jjn: vjn
+zld: hmh vcn gns
+tvt: lpx rdc rjt dcq xmn
+bxv: nnr
+csf: hdj nzc nch bpp
+xfr: jzr szg zcv cmc
+fbc: cbk
+fht: zbx hss jtv
+ghg: gbk ktq nrv mlf spj
+ccr: bxm fdc kjk sdg tjl
+tdj: bxb cbl sfg jtm pvm
+zfb: lcx
+nhc: vtx
+nkp: jmp mvt
+dcq: csb cht vmm
+fnv: bjl qkr fkb
+zpz: tds qfr qpg mlk
+ggg: fqh
+nkn: mbk
+hts: xqb jtm hdp ggg
+gbf: zrd jfg
+blp: qlv cnl rtg
+mlf: lct jnq
+mss: bcx rqf zlq hzf
+tds: kng dlc
+nvd: lqx
+fjm: psr chr jcb
+nqt: pvn lfs btm dkm
+ztg: zcm lss bxm xsg cgz
+fqt: rql zcm ffk fqh fjv
+frt: sbj
+lss: nkq
+pxh: gvl pmz rqk ncs flf qsx
+jgc: bvx nzs fnv mhz
+gvl: trd
+hkj: drq psr
+gzl: zdg
+jbv: nsp
+qkj: csv clj fmp cgz
+gmv: qvt qxl rxv
+ltb: jrs cqm
+dmd: cgt sxh
+vnr: nqc
+tbh: vdf rnd zdk hnh jms
+ggf: gdq
+fqp: dhd
+scb: nvl
+glt: xgz sss hnn zcv qkg
+ndq: hnz gmd
+brv: mnp fvl qxc
+kqc: vdc svz rkx zjl
+mvt: ckr
+bzg: pln xqb hmv ksv
+pcc: flf vqd jtv clq
+hkh: qvt
+bxl: hbx vbs xtg sbk
+pzm: ddt npn svf
+dlz: nkx bvm
+dnq: hhl cbq hdp
+cjc: qgg frn
+dbh: xfg mls qzd djf cbv
+skh: nqf lct nxz
+cqv: vtl
+lnr: qfl tkl
+hhl: cgb
+zsr: hbt
+dnm: qfr srt prl ggg xzf
+dgm: hbt ccp bxg
+vdf: mdx pkl
+zpl: rpz
+pgc: brb clj glz rss
+jhs: czh tkd pld txf
+blq: vnr mxv
+mxx: nzc trd
+gmt: djv nsp rkx
+dvs: khl qdd mkn sjl
+zjt: xkx lhz qpl bzk
+sgz: nsh tvz fqb ljk
+bvg: dck sgc znz gdx
+klk: rlc ltb hms
+phv: pfg vth sqj
+skr: qtk cjz zds
+trq: zcn pgg
+cjb: blh hlx
+dxz: vpb sjk xsg kbc
+npp: kzl ksj xkx pdh qnr qqn cvk
+hhv: tkl qkg rdn rss
+lhk: zck xzp bkm vsl
+bzr: jsn ckr
+gtv: rfp
+bbq: kcd ljk vxq ppq
+dtq: hfc qmj bzl krm
+pqf: mgf jjd vkz
+pdj: pfg pkl vsl
+slz: znh svg zrv gvn
+lrp: lqh dkq dns pdh
+mqs: xgh
+mqm: glf
+sht: zfl mxq tqs ckp
+ndh: dkl xsb njp
+ckp: cbk
+xmk: hrh lhz
+czk: fbr gbt hnz
+fhg: xgj msr hbx
+rkf: vqq
+bnp: kjj plq qlz
+xsg: cnd gjf cbq
+krj: rkf msx jxg mhd
+zbz: bcx jqk hfc
+fpj: gck
+qnh: blh rht
+nrt: zrh pjn chh qnh
+xjd: kzh mmp mll rzd
+fgs: lzh
+xjl: hxs tqm gdq
+fzr: clr jls vmv
+bjx: nxs ftq fzg qbv
+gmd: zth zsr mrn
+flf: xsr hkh
+pxs: tzc zbd
+ctn: pcj vst qfx
+hmh: mss lpk lms
+rpk: jls xtj xtb tlv
+glx: ktq rmt jsd hqz
+khl: rdn xdd bvm
+nzm: pkl
+jjj: kng hnn
+djm: zrd ttv cst dgp
+jxq: fhg kbc bkb csh
+nqq: vcz psb kpd rvm
+ffc: nsj gvn rxc mzd
+qkr: sjf
+qkl: sqk bnp lbc fcq
+plv: svz qpg xjf
+brc: gcg fdc
+kmt: jgb
+sgg: rvv fhf cfr
+mvv: pvn pbg vxc xgz
+grm: gkd nfb
+xfs: nqf vcm lbn
+xnl: mqs vgl hrb crx jcb rdm
+ggt: qqk njt gbf drm
+gdx: rtf
+hnd: mxv lmx fjp
+bxb: kng zpl
+hfh: ftv jlv
+xdg: dlb jhc vgg vsm
+rbc: rjr drh gbm mgk
+pfj: ckt xfh hxg lcs rbf lct
+gbk: hmv ckh
+kxb: tpf pgd fft qgh zpt
+mls: jcz xtj
+zrs: nnr
+drq: qbb
+bgk: fzg jzl jkb qpg
+trt: bxm qkg hqz css
+nlx: gzc mrx hdc lzh
+bzk: nvq fjp cgc
+jnm: vhk psd tgp svg fmc
+fnj: jzl gcg fzg tql
+vgg: svz hzz sjj gtn
+pld: kdz snb
+nsv: fbc nsm cnl
+kth: bmd xdd bvf
+mgk: fqp rnd xcv
+vbx: jbp qgl
+hzz: vpb
+dns: fmb jqk fhf lpk
+zdg: xsb lqx mrx
+prf: bbt
+ntb: zjp sfc gbh ztk
+trh: vgv hlx
+hcr: mbk lss
+rql: pbg
+hnx: zrv crk lcp bvb
+gkz: mlf jzl nnb
+ktq: rvn
+ptr: xgh kdz kfz gdq
+xlf: fvl
+hkl: fjm hdc nsd
+ckq: tcl lfs
+ktt: stv stt bqp dch
+pjn: lhz
+dkp: rxj vbd
+vsz: tvh ggq
+vgv: pkr
+psb: tgv
+mfc: nbh zcv qxc gqv
+ghc: qjs sxh zpp qfl cch
+hxg: chm pcf qvz
+ccq: bft qcf hvt
+bls: kbt vll glf
+bld: qkr knr tzc pdb
+mzl: jtm qxc vxc fvl
+nsj: dtm
+gbp: blq ppt dxt
+vrp: sss gjm
+tlx: qpg xxl hzz nrv
+ssv: ktb lzh qtz hfh
+bfd: ddt gjl qsl dfd
+rrq: fmp xfg ccz bnl
+qsl: hvt
+pgd: vzt drh gbg
+qnc: qnz kzv dfl
+mlq: vgv
+cbm: gkd
+dhh: cxc rnd qvd
+ldf: bpp ldr
+hkb: mvq ngx qxl
+nzx: qtk
+xjs: zgr npn
+cxc: tkb cmr frq ftn
+lmr: pln jfv vbx zjl
+ttx: jcd mkk zjp jlf tkm
+qhj: mqc
+mpl: ggg mzs nrl svb
+jch: pkj vbb
+qtc: jqp
+hzg: pcj fcq hvt qkk
+vjg: gpz cmt fkg bvb
+jbt: zxm zfb
+dfs: tqm
+xpl: mfr lcp
+xhn: kmt
+jqh: hph nhp snb
+hxs: hbt qnr
+qzz: jls dhs
+sdz: xjv qhj jfc drm
+gnt: pmx mkk
+jts: kxl
+vmv: gxl
+kng: nsp
+ckc: drf rmh msr mzq
+flb: lvb vsl lpn jgk
+msr: cgx bqt
+trz: snr lrs fpr qkc
+llz: bjl hnv nhf spq
+ngq: qlx ljt qjs
+xfl: lht fmd fgm pcf
+fsf: fkk tmd
+kbv: zds spj zpl jxg
+nkq: pql hcq
+dxj: bkm rfh
+hnz: hqt
+pql: tsf qmz
+mgz: jcs nbf vnv mzd
+sxd: zbd
+fpq: kjj bms
+rcn: qdd cvg mnp jfv xtg
+fft: vzt xll pcl jlf
+dsr: mfr rjr
+qqk: cqr dkl
+skk: dch tmt kjk
+plq: rbm
+bzd: vbd rdc psb
+qxf: cnl jnm tgd thx
+jmc: rbm
+dnx: frq txn
+zvn: skx lqx nsm cbk
+tgp: jtt fbs
+nkk: ttv qlz qtp sgf
+hlk: rht
+xqm: trd
+xnf: nrq zcn kjp pkj lsh
+jkf: jnx vvk mzs ppm
+kdl: ghg bbt jcc gmv
+vfk: plq hsz qdk bzh
+jhk: vsz kqh skm
+kcp: kzl
+zqc: pjf xzh
+rdm: pjf
+jrk: vbd
+nsh: pnv
+pnv: qvd gcb
+mcb: mvx bfz dlz kbc ptn
+llr: lct nvl jgn
+fmn: lgz lnz bvf fcl
+gdq: nnr
+hzf: fpq hfb
+snm: xfb qnh zpj xsb hrz xcv
+clq: kbn
+pdc: psk lhv lff skr
+jds: drn
+jkn: xfm ggq dbp pxb
+ljk: ckp
+lzh: mcc
+qtq: fvl ksv fsf
+mzq: hqz jbp
+lpb: vhm nvm
+kmf: nkx jcz
+sbj: hlx lrz
+sfm: fcl hdn zgx krk
+mdh: hmx hkb tmt pcq mmp
+xbd: mlb sjl zpl jbt szg
+hdc: fps
+hfc: mzn qkr
+gtl: vpg
+cjz: xqm
+jjs: vbb mvx gbj
+kkh: lzh rbt lzs frk
+txk: szf fmc xgh
+rcm: tkl krk pmz zhh qdd
+tdb: svf dsr xpl mlq zrv
+xbp: hdj ggq ldx
+hfq: bpv bmx
+qlv: mzn bvb
+mzd: lrz
+vcn: mfr pkr zth
+hsf: rzd hhl
+xfg: bfp tmt
+dbt: vqc hvt jgk dmg
+nzg: txc bfz mlm qnz
+sqq: vmm fcq lnt qsl zck
+lbc: fpj
+hch: ktl jqk
+npn: hfk
+cxq: vxg npd nlf
+fmc: dfd mrt
+qcf: ggf bxv
+blc: ldt bfd nhp hdh
+bbh: cmr scz nzm vth
+rgq: zbq vjp bcf
+cbv: rpt lbn nrz
+sjl: fmp rlc
+qxn: sbb zfb qnq
+ztk: hqr
+ldt: zsr hqr tnb gkc lms
+vdc: cbm trl mxk
+qtz: fll
+rxj: scz
+bns: hcj nqc
+kfz: znh xjv gbg
+qbc: bxg zxj nsg
+pvt: nqf zpl nhc
+srs: dkr mkj tmz jlv
+kbc: vpg brb
+kjv: lcj lfs gxf
+tbx: qtz
+vst: cbp rxm
+jkb: chk ckc dqv
+bkr: trh bgm
+hsz: ggf hfk
+gpz: sxd prt
+pml: xlz nvd gck
+dfl: lqc kbn jjf zds
+vsm: srl
+bpv: tcl
+qmf: nxx xhn jbt zmd
+mfs: qtk
+mth: vbd gzc bmh
+kcb: vrp xhn lht lsm
+ksz: gvn qbp jbg
+gsx: nnx cch
+rmp: mhc ljg bkr cmt qgd
+zdr: vhk xrg qkd dmz qct
+gcz: vth vrn lnt cxg
+xlb: xlf lph rlz
+mmp: bkb pmz stn
+cnc: lsh ljt cds rgq
+fkv: jgq rfs ldf
