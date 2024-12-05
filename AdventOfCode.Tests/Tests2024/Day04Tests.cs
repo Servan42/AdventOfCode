@@ -12,7 +12,7 @@ namespace AdventOfCode.Tests.Tests2024
         Day04Ex sut;
 
         [SetUp]
-        public void Part1_Setup()
+        public void Setup()
         {
             sut = new Day04Ex();
         }
