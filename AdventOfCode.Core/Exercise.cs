@@ -10,11 +10,6 @@
             InputLines = File.ReadAllLines(fileName).ToList();
         }
 
-        public void SaveOutputToFile(string fileName)
-        {
-            File.WriteAllText(fileName, Output);
-        }
-
         public abstract void ComputePart1();
         public abstract void ComputePart2();
     }
