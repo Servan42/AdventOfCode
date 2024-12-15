@@ -68,5 +68,15 @@ namespace AdventOfCode.Core
             }
             return mult;
         }
+
+        public static (int x, int y) Add(this (int x, int y) point1, (int x, int y) point2)
+        {
+            return (point1.x + point2.x, point1.y + point2.y);
+        }
+
+        public static (int x, int y) Sub(this (int x, int y) point1, (int x, int y) point2)
+        {
+            return (point1.x - point2.x, point1.y - point2.y);
+        }
     }
 }
