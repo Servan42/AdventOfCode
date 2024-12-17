@@ -13,8 +13,8 @@ namespace AdventOfCode.Core.Daily2024.Day09
         public override void ComputePart1()
         {
             var diskFragmenter = new DiskFragmenter(this.InputLines[0]);
-            diskFragmenter.Unwrap();
-            diskFragmenter.Compact();
+            diskFragmenter.UnwrapDiskmap();
+            diskFragmenter.CompactBlocks();
             this.Output = diskFragmenter.CalculateChecksum().ToString();
         }
 

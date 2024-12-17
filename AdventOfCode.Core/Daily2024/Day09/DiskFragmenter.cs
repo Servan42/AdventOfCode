@@ -18,10 +18,7 @@ namespace AdventOfCode.Core.Daily2024.Day09
             this.Blocks = new();
         }
 
-        // Intuition: We might need to keep track fo repeated fileids as individuals ids rather than just printing them
-        // Ex: For file id 34, repeated 3 times, maybe "343434" is differement from [ "34", "34", "34" ]
-        // 88217448737 too low
-        public void Unwrap()
+        public void UnwrapDiskmap()
         {
             int fileId = 0;
             bool isFileBlock = true;
@@ -51,7 +48,9 @@ namespace AdventOfCode.Core.Daily2024.Day09
             }
         }
 
-        public void Compact()
+        [Obsolete("TO REDO WITH NEW HYPOTHESIS")]
+
+        public void CompactBlocks()
         {
             char[] compactedBlocks = string.Concat(Blocks).ToCharArray();
             int lastFileIdIndex = GetLastFileIdIndex(compactedBlocks, string.Concat(Blocks).Length - 1);
@@ -84,6 +83,7 @@ namespace AdventOfCode.Core.Daily2024.Day09
             return resultIndex;
         }
 
+        [Obsolete("TO REDO WITH NEW HYPOTHESIS")]
         public double CalculateChecksum()
         {
             double checksum = 0;
