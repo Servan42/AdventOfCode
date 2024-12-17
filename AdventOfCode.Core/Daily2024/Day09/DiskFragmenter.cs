@@ -9,12 +9,13 @@ namespace AdventOfCode.Core.Daily2024.Day09
     public class DiskFragmenter
     {
         public string Diskmap {get; set; }
-        public string Blocks {get; set; }
+        public List<MemoryBlock> Blocks {get; set; }
         public string CompactedBlocks { get; set; }
 
         public DiskFragmenter(string inputLine) 
         {
             this.Diskmap = inputLine;
+            this.Blocks = new();
         }
 
         // Intuition: We might need to keep track fo repeated fileids as individuals ids rather than just printing them
@@ -22,7 +23,6 @@ namespace AdventOfCode.Core.Daily2024.Day09
         // 88217448737 too low
         public void Unwrap()
         {
-            StringBuilder blocks = new();
             int fileId = 0;
             bool isFileBlock = true;
 
@@ -30,23 +30,31 @@ namespace AdventOfCode.Core.Daily2024.Day09
             {
                 if (isFileBlock)
                 {
-                    blocks.Append(string.Concat(Enumerable.Repeat(fileId.ToString(), blocksize - '0')));
+                    Blocks.Add(new MemoryBlock
+                    {
+                        FileId = fileId,
+                        Size = blocksize - '0',
+                        IsFileBlock = true
+                    });
                     fileId++;
                 }
                 else
                 {
-                    blocks.Append(new string('.', blocksize - '0'));
+                    Blocks.Add(new MemoryBlock
+                    {
+                        Size = blocksize - '0',
+                        IsFileBlock = false
+                    });
                 }
 
                 isFileBlock = !isFileBlock;
             }
-            this.Blocks = blocks.ToString();
         }
 
         public void Compact()
         {
-            char[] compactedBlocks = this.Blocks.ToCharArray();
-            int lastFileIdIndex = GetLastFileIdIndex(compactedBlocks, Blocks.Length - 1);
+            char[] compactedBlocks = string.Concat(Blocks).ToCharArray();
+            int lastFileIdIndex = GetLastFileIdIndex(compactedBlocks, string.Concat(Blocks).Length - 1);
             int firstDotIndex = GetFirstDotIndex(compactedBlocks, 0);
 
             while (firstDotIndex < lastFileIdIndex)
