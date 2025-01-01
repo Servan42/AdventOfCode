@@ -8,6 +8,9 @@ namespace AdventOfCode.Core
 {
     public static class DataStructureExtensions
     {
+        public static readonly (int alongRow, int alongCol)[] CrossDirections = [(-1, 0), (0, 1), (1, 0), (0, -1)];
+        public static readonly (int alongRow, int alongCol)[] StarDirections = [(-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1), (0, -1)];
+
         public static List<double> GetSpacesSeparatedDoubles(this string str)
         {
             return str
@@ -76,14 +79,52 @@ namespace AdventOfCode.Core
         public static char[,] ToCharArray(this List<string> stringList)
         {
             var result = new char[stringList.Count, stringList[0].Length];
-            for (int i = 0; i < stringList.Count; i++)
+            for (int row = 0; row < stringList.Count; row++)
             {
-                for (int j = 0; j < stringList[0].Length; j++)
+                for (int col = 0; col < stringList[0].Length; col++)
                 {
-                    result[i, j] = stringList[i][j];
+                    result[row, col] = stringList[row][col];
                 }
             }
             return result;
+        }
+
+        /// <summary>
+        /// O(n²)
+        /// </summary>
+        public static char[,] ToCharArrayWithBorder(this List<string> stringList, char borderChar)
+        {
+            var maxRows = stringList.Count + 2;
+            var maxCols = stringList[0].Length + 2;
+            var result = new char[maxRows, maxCols];
+
+            for (int row = 0; row < stringList.Count + 2; row++)
+            {
+                for (int col = 0; col < stringList[0].Length + 2; col++)
+                {
+                    if (row == 0 || row == maxRows - 1
+                        || col == 0 || col == maxCols - 1)
+                    {
+                        result[row, col] = borderChar;
+                        continue;
+                    }
+
+                    result[row, col] = stringList[row - 1][col - 1];
+                }
+            }
+            return result;
+        }
+
+        public static void PrintGridInTerminal(this char[,] grid)
+        {
+            for (int row = 0; row < grid.NbRows(); row++)
+            {
+                for (int col = 0; col < grid.NbColumns(); col++)
+                {
+                    Console.Write(grid[row, col]);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }
