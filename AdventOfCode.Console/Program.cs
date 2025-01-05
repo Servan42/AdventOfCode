@@ -1,4 +1,4 @@
-﻿using AdventOfCode.Core.Daily2024.Day12;
+﻿using AdventOfCode.Core.Daily2024.Day13;
 using System.Diagnostics;
 
 internal class Program
@@ -8,7 +8,7 @@ internal class Program
     /// </summary>
     private static void Main(string[] args)
     {
-        var exercise = new Day12Ex();
+        var exercise = new Day13Ex();
 
         exercise.LoadInputFromFile("input.txt");
         Stopwatch sw = Stopwatch.StartNew();
