@@ -10,14 +10,14 @@ namespace AdventOfCode.Core.Daily2024.Day13
     {
         public override void ComputePart1()
         {
-            this.Output = ParseScenarios()
+            this.Output = ParseScenarios(false)
                 .Select(s => s.GetNbTokensToWin())
                 .Where(n => n > 0)
                 .Sum()
                 .ToString();
         }
 
-        private List<Scenario> ParseScenarios()
+        private List<Scenario> ParseScenarios(bool isPart2)
         {
             var scenarios = new List<Scenario>();
             Scenario currentScenario = null;
@@ -36,6 +36,13 @@ namespace AdventOfCode.Core.Daily2024.Day13
                 else if (line.Contains("Prize"))
                 {
                     currentScenario!.Prize = ParseLine(line, '=');
+                    if (isPart2)
+                    {
+                        currentScenario.Prize = (
+                            currentScenario.Prize.X + 10000000000000,
+                            currentScenario.Prize.Y + 10000000000000
+                            );
+                    }
                     scenarios.Add(currentScenario);
                 }
             }
@@ -54,6 +61,8 @@ namespace AdventOfCode.Core.Daily2024.Day13
 
         public override void ComputePart2()
         {
+            //Px = a*Ax + b*Bx
+            //Py = a*Ay + b*By
             throw new NotImplementedException();
         }
     }

@@ -10,16 +10,16 @@ namespace AdventOfCode.Core.Daily2024.Day13
 {
     internal class Scenario
     {
-        public (int X, int Y) ButtonA { get; set; }
-        public (int X, int Y) ButtonB { get; set; }
-        public (int X, int Y) Prize { get; set; }
+        public (decimal X, decimal Y) ButtonA { get; set; }
+        public (decimal X, decimal Y) ButtonB { get; set; }
+        public (decimal X, decimal Y) Prize { get; set; }
 
         private List<Iteration> seen = new();
 
-        internal int GetNbTokensToWin()
+        internal decimal GetNbTokensToWin()
         {
             Stopwatch sw = Stopwatch.StartNew();
-            var fronteir = new PriorityQueue<Iteration, int>();
+            var fronteir = new PriorityQueue<Iteration, decimal>();
             fronteir.Enqueue(new(0, 0, 0, 0), 0);
 
             while (fronteir.Count > 0)
@@ -37,7 +37,7 @@ namespace AdventOfCode.Core.Daily2024.Day13
 
                 foreach (var neighbour in GetNeighbours(iteration))
                 {
-                    int manhattan = Math.Abs(neighbour.PosX - Prize.X) + Math.Abs(neighbour.PosY - Prize.Y);
+                    decimal manhattan = Math.Abs(neighbour.PosX - Prize.X) + Math.Abs(neighbour.PosY - Prize.Y);
 
                     if (!seen.Contains(neighbour)
                     && neighbour.nbA <= 100
@@ -74,6 +74,6 @@ namespace AdventOfCode.Core.Daily2024.Day13
             return iteration.PosX == Prize.X && iteration.PosY == Prize.Y;
         }
 
-        internal record Iteration(int PosX, int PosY, int nbA, int nbB) { }
+        internal record Iteration(decimal PosX, decimal PosY, decimal nbA, decimal nbB) { }
     }
 }
